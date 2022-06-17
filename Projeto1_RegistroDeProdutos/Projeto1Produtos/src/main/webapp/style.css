@@ -5,12 +5,19 @@
 html {
 	background-color: #e0ffca;
 	font-family: 'Kdam Thmor Pro', sans-serif;
+	text-align: center;
 }
 
 body {
 	/*font-family: 'Open Sans', sans-serif; */
 	font-size: 1em; /* equivale a 16px ou fonte no tamanho 12 */
 	font-weight: 400;
+	text-align: center;
+}
+
+table {
+	display:inline;
+	
 }
 
 .imagem1 {
