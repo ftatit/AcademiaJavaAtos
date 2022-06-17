@@ -35,7 +35,8 @@
 	<br><!-- Quebra de linha -->
 	<h1>Lista de Produtos</h1>
 	<a href="novo.html" class="Botao1">Novo Produto</a>
-	
+	<br>
+	<br>
 	<table id="tabela">
 		<thead>
 				<tr>
