@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Mono', monospace;
+}
+
+body {
+    height: 200vh;
+}
+
+
+/* Estilo para o arquivo posicionamento.html */
+
+.adesivo {
+    width: 500px;
+    height: 50px;
+    background-color: tomato;
+    margin: 30px auto;
+    position: sticky;
+    top: 10px;
+    text-align: center;
+    line-height: 50px;
+    z-index: 1;
+}
+
+.pai {
+    width: 400px;
+    height: 400px;
+    border: 2px solid black;
+    margin: 20px auto;
+    background-color: white;
+    position: relative;
+}
+
+.filho1 {
+    text-align: center;
+    color: white;
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    line-height: 200px;
+}
+
+.filho2 {
+    text-align: center;
+    color: white;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    position: relative;
+    left: 50px;
+    top: 25px;
+    line-height: 200px;
+    z-index: 2;
+}
+
+
+
+
+/* Estilo para o arquivo exibicao.html */
+
+.container {
+    background-color: yellow;
+    height: 400px;
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+}
+
+.div {
+    background-color: red;
+    text-align: right;
+    margin: 10px;
+    height: 100px;
+    width: 200px;
+    border: 1px solid black;
+}
