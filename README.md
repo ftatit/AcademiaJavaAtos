@@ -2,4 +2,4 @@
 
 Academia de JAVA (Abril/2022 - Julho/2022)
 
-Exercícios e projetos realizado durante a Academia de Java.
+Exercícios e projetos realizados durante a Academia de Java.
