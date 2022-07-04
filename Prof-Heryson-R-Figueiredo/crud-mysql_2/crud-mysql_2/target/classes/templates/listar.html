@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns:th="https:/thymeleaf.org">
+
+
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lista de Pessoas</title>
+
+
+<!-- Importando JQuery e Bootstrap: -->
+<link rel="stylesheet"
+	th:href="@{/bootstrap-5.2.0-beta1-dist/css/bootstrap.min.css}">
+<script th:src="@{/jquery-3.6.0-dist/jquery-3.6.0.min.js}"></script>
+<script th:src="@{/bootstrap-5.2.0-beta1-dist/js/bootstrap.min.js}"></script>
+
+
+
+
+
+</head>
+
+
+<style>
+
+table {
+	margin: 15px auto;
+	border-collapse: collapse;
+	min-width: 500px;
+}
+
+table thead {
+	background: gray;
+}
+
+table tr {
+	border: 2px solid #ddd;
+}
+
+table tbody td:nth-child(1), table tbody td:nth-child(4), table tbody td:nth-child(5)
+	{
+	text-align: left;
+}
+
+table tbody tr:hover {
+	background: #f1f1f1;
+	cursor: pointer;
+}
+
+table th, table td {
+	padding: 5px;
+}
+</style>
+
+
+<body>
+	<div class="container">
+		<h1>Listagem de pessoas:</h1>
+
+		<table>
+			<thead>
+				<tr>
+					<th>Id</th>
+					<th>Nome</th>
+					<th>E-mail</th>
+					<th>Excluir</th>
+					<th>Alterar</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="u : ${user}">
+					<td th:text="${u.id}"></td>
+					<td th:text="${u.name}"></td>
+					<td th:text="${u.email}"></td>
+					<td><a th:href="@{/crud/delete/{id} (id=${u.id})}"><i
+							class="fa-solid fa-trash-can"></i></a></td>
+					<td><a th:href="@{/crud/update/{id} (id=${u.id})}"><i
+							class="fa-solid fa-pen-to-square"></i></a></td>
+				</tr>
+			</tbody>
+
+		</table>
+	</div>
+
+
+	<a href="/crud/home" type="button" class="btn btn-primary">Voltar</a>
+	<script src="https://kit.fontawesome.com/0a84b03181.js"
+		crossorigin="anonymous"></script>
+</body>
+</html>
