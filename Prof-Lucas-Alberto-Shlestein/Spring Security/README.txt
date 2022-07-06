@@ -4,7 +4,7 @@ Professor: Lucas Schlestein
 
 Atividade: Exercício Spring Boot + Security + Rest + JPA
 
-https://github.com/ftatit/AcademiaJavaAtos/
+https://github.com/ftatit/AcademiaJavaAtos/tree/main/Prof-Lucas-Alberto-Shlestein/Spring%20Security
 
 Enunciado:
 
