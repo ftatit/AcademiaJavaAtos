@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="https:/thymeleaf.org">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lista de usuários</title>
+
+
+<!-- Importando JQuery e Bootstrap: -->
+
+<link rel="stylesheet"
+	th:href="@{/bootstrap-5.2.0-beta1-dist/css/bootstrap.min.css}">
+<script th:src="@{/jquery-3.6.0-dist/jquery-3.6.0.min.js}"></script>
+<script th:src="@{/bootstrap-5.2.0-beta1-dist/js/bootstrap.min.js}"></script>
+
+</head>
+<body>
+	<div th:insert="fragments/publica-nav :: nav"></div>
+	<div class="container">
+		<div class="row">
+
+			<div class="col">
+				<h1>Lista de Usuários</h1>
+
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>Nome</th>
+							
+							<th>E-mail</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:if="${usuarios.empty}">
+							<td colspan="2">Sem usuários</td>
+						</tr>
+						<tr th:each="usuario : ${usuarios}">
+							<td><span th:text="${usuario.nome}"> Nome </span></td>
+							
+							<td><span th:text="${usuario.email}"> E-mail </span></td>
+
+
+							<td><span th:text="${usuario.ativo} ? 'ATIVO' : 'NÃO ATIVO'">
+									Ativo? </span></td>
+
+
+							<td><th:block th:each="pp : ${usuario.papeis}">
+									<span th:text="${pp.papel}"> Papel </span>
+									<br />
+								</th:block></td>
+
+
+							<td>
+								<!-- CSS do Bootstrap, 2ln é a ação disparada ao apertar o botao  -->
+
+								<a class="btn btn-outline-danger btn-sm"
+								th:href="@{/usuario/admin/apagar/{id}(id=${usuario.id})}"
+								th:data-confirm-delete="|Você gostaria de apagar ${usuario.nome}?|"
+								onclick="if (!confirm(this.getAttribute('data-confirm-delete'))) return false">
+									Apagar </a>
+							</td>
+							<td>
+								<!-- Adicionando o botao editar: --> <a
+								class="btn btn-outline-primary btn-sm"
+								th:href="@{/usuario/editar/{id}(id=${usuario.id})}">Editar</a>
+							</td>
+
+							<td><a class="btn btn-outline-primary btn-sm"
+								th:href="@{/usuario/editarPapel/{id}(id=${usuario.id})}">
+									Papéis</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+		</div>
+	</div>
+
+</body>
+</html>

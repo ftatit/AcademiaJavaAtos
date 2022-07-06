@@ -1,0 +1,12 @@
+/*Criando o banco de dados:*/
+create database usuarios;
+
+use usuarios;
+
+/*Descrevendo os parametros das colunas da tabela:*/
+describe usuario;
+
+/*Selecionando a tabela:*/
+select * from usuario;
+select * from papel;
+select * from usuario_papel;

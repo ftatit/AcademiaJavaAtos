@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="https:/thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JUsers</title>
+    
+	<link rel="stylesheet" th:href="@{/bootstrap-5.2.0-beta1-dist/css/bootstrap.min.css}">
+	<script th:src="@{/jquery-3.6.0-dist/jquery-3.6.0.min.js}"></script>
+	<script th:src="@{/bootstrap-5.2.0-beta1-dist/js/bootstrap.min.js}"></script>
+	
+
+</head>
+
+
+<body>
+
+	<!-- Adicionando a linha seguinte ele ja insere todas as linhas  da publica-nav.html-->
+	<div th:replace="fragments/publica-nav :: nav"></div>	
+	<div class="container">
+		<div class="row">
+			<div class="col"> 
+		
+				<h2 th:text="${msnBemVindo}"></h2>
+				
+				<!-- Vamos colocar uma ancora para a requisição chegar no método "adicionarUsuario" 
+				<a class="btn btn-primary" href="/usuario/novo">Novo Usuário</a>
+				 Ele chega no nosso controlador "/usuario" e no nosso metodo "/novo" -->
+				
+			</div>
+		</div>
+    </div>
+</body>
+</html>
