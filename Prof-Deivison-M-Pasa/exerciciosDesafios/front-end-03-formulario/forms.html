@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <script type="text/javascript" src="main.js"></script>
+
+    <title>Exemplo | Formulário e JavaScript</title>
+
+</head>
+
+<body>
+    
+
+</div>
+    <div class="container text-center mb-5 mt-5">
+        <h1>Formulário e JavaScript</title></h1>
+        
+        <h5> O formulário abaixo <span class="font-bold">não irá enviar seus dados,</span> 
+            apenas exemplifica o uso de diversos inputs e scripts JavaScript. </h5>
+    </div>
+
+    <form>
+        <div class="container">
+            <h2>Informações Pessoais</h2>
+           
+            <!--Primeira linha:-->
+            <div class="row">
+                <div class="col">
+                    <label for="nome">Nome<span class="text-danger">*</span></label><input type="text" id="nome" class="form-control"
+                        placeholder="Nome" aria-label="Nome">
+                </div>
+
+                <div class="col">
+                    <label for="sobrenome">Sobrenome<span class="text-danger">*</span></label><input type="text" id="sobrenome" class="form-control"
+                        placeholder="Sobrenome" aria-label="Sobrenome">
+                </div>
+            </div>
+            
+            <!--Segunda linha:-->
+            <div class="row">
+                <div class="col">
+                    <label for="e-mail">E-mail<span class="text-danger">*</span></label><input type="email" id="e-mail" class="form-control"
+                        placeholder="E-mail" aria-label="E-mail">
+                </div>
+                <div class="col">
+                    <label for="login">Login</label><input type="text" id="login" class="form-control" placeholder=""
+                        aria-label="Last name" readonly>
+                </div>
+                <div class="col">
+                    <label for="senha">Senha<span class="text-danger">*</span></label><input type="password" id="senha" class="form-control"
+                        placeholder="Senha" aria-label="Senha">
+                </div>
+            </div>
+    
+            <!--Terceira linha:-->
+            <div class="row">
+                <div class="col-md-2">
+                    <label for="cep">CEP</label><input type="cep" id="cep" class="form-control" placeholder="CEP"
+                        aria-label="CEP">CEP nao encontrado
+                </div>
+                <div class="col">
+                    <label for="endereco">Endereço</label><input type="text" id="endereco" class="form-control"
+                        placeholder="Endereço" aria-label="Endereço">
+                </div>
+                <div class="col">
+                    <label for="complemento">Complemento</label><input type="text" id="complemento" class="form-control"
+                        placeholder="Complemento" aria-label="Complemento">
+                </div>
+            </div>
+
+             <!--Quarta linha:-->
+             <div class="row">
+                <div class="col-md-2">
+                    <label for="Bairro">Bairro</label><input type="text" id="bairro" class="form-control" placeholder="Bairro"
+                        aria-label="Bairro">
+                </div>
+                <div class="col">
+                    <label for="endereco">Cidade</label><input type="text" id="cidade" class="form-control"
+                        placeholder="Cidade" aria-label="Cidade">
+                </div>
+                <div class="col">
+                    <label for="complemento">Estado</label><input type="text" id="estado" class="form-control"
+                        placeholder="Estado" aria-label="Estado">
+                </div>
+            </div>
+            
+        <br><hr>
+        </div>
+        
+        <br>
+
+
+      
+    
+        <div class="container mt-3">
+            <h2>Informações Profissionais</h2>
+            <div class="row">
+                <div class="col-sm-5">
+                    <label for="Github">Perfil no Github<span class="text-danger">*</span></label>
+                    <div class="input-group">
+                      <div class="input-group-text">github.com/</div>
+                      <input type="text" class="form-control" id="Github" placeholder="username">
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <label for="academia">Academia<span class="text-danger">*</span></label>
+                    <select class="form-select" id="academia">
+                      <option selected>Selecione</option>
+                      <option value="java">Java</option>
+                      <option value="dotnet">.NET</option>
+                    </select>
+                    </div>
+                    <div class="col-sm-4">
+                        <label for="professor">Professor<span class="text-danger">*</span></label>
+                        <select class="form-select" id="professor">
+                          <option selected>Selecione</option>
+                          <option value="1">Heryson Figueiredo</option>
+                          <option value="2">Lucas Alberto Schlestein</option>
+                          <option value="3">Sylvio André Garcia</option>
+                          <option value="3">Deivison Morim Pasa</option>
+                        </select>
+                        </div>
+                </div>
+                <br><hr>
+        </div>
+     
+            <div class="container mb-4 mt-3">
+                <h2>Termos Legais</h2>
+                <div class="container-overflow-scroll">
+                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac tincidunt metus. Pellentesque habitant morbi tristique
+                         senectus et netus et malesuada fames ac turpis egestas. Nullam aliquet pharetra diam. Cras sit amet neque ac eros imperdiet
+                          vehicula. Nulla facilisi. Vivamus eu mollis ex. Vivamus lorem velit, molestie eu scelerisque et, pharetra a odio. Class 
+                          aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris laoreet interdum nisi, sed 
+                          volutpat nibh molestie et. Etiam tincidunt ultrices mi sed accumsan. Suspendisse potenti. Fusce venenatis auctor felis 
+                          vel rhoncus. Aenean sed tellus eu felis aliquet laoreet. Vivamus ut nibh tincidunt, hendrerit risus et, placerat purus.
+                           Vestibulum interdum rhoncus blandit. Nulla vitae mollis mauris, id eleifend odio.
+                    </p>
+                    <p>    In volutpat vitae neque at mollis. Proin quis lacus accumsan, porttitor ligula sodales, sodales tellus. Nulla facilisi.
+                             Interdum et malesuada fames ac ante ipsum primis in faucibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                             Nunc accumsan non odio eu posuere. Aenean vitae massa luctus, feugiat orci sed, iaculis quam.
+                    </p>
+                    <p>    Cras in turpis purus. Cras bibendum diam in mi gravida fringilla. Nunc dui sapien, condimentum vel est id,
+                                 venenatis volutpat tortor. Nulla quam metus, imperdiet non aliquet id, euismod eu tortor. Aliquam nunc ligula, 
+                                 odales nec enim sed, cursus dictum enim. Cras eget fringilla nisi. Vivamus viverra bibendum velit vitae dignissim.
+                                  Fusce et ligula et magna rhoncus posuere feugiat eget elit. Maecenas ultrices mattis erat vel placerat. Cras at 
+                                  erat tempor, dictum risus non, finibus metus. Nulla facilisi. Duis aliquam convallis ligula ut mattis.
+                    </p>
+                    <p>    Praesent porta mi id tincidunt ornare. Integer et tellus ante. Duis luctus egestas commodo. Nullam sit
+                                     amet lacinia neque. In rhoncus velit sed leo imperdiet pharetra. Ut ante orci, sagittis sit amet magna in,
+                                      tempus posuere lacus. Vestibulum semper convallis accumsan. Fusce ut aliquam turpis, a consectetur neque.
+                                       Nullam vel neque nunc.
+                    </p>
+                    <p>    Sed viverra mauris nec mi dapibus consequat. Duis eu pretium magna. Quisque posuere dui aliquet tellus 
+                                        tempor feugiat. Donec vestibulum imperdiet augue sit amet rutrum. Suspendisse leo quam, porta eu magna vel,
+                                         rhoncus dignissim nisi. Aliquam posuere euismod dolor sit amet posuere. Morbi in ipsum sit amet arcu viverra 
+                                         gravida. Pellentesque eu facilisis libero. Duis fermentum ante ante, id pellentesque sapien feugiat eu.     
+                                    </p>
+                                    </div>
+                <div class="form-check mt-2">
+                    <input class="form-check-input" type="checkbox" value="" id="termoslegais">
+                    <label class="form-check-label" for="termoslegais">Eu li e concordo com os termos acima.</label>
+                  </div>
+            </div>
+            <div class="container">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="info-email" id="quero-info" checked>
+                    <label class="form-check-label" for="quero-info">Quero receber informações e novidades por e-mail</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="info-email" id="n-quero-info">
+                    <label class="form-check-label" for="n-quero-info">Não quero receber informações e novidades por e-mail</label>
+                  </div>
+    
+             </div>
+            <div class="d-grid gap-2 col-6 mx-auto mt-4">
+                
+                    <button type="button" class="btn btn-primary btn-lg" onclick="salvarDados(nome.value, sobrenome.value, e-mail.value, login.value, senha.value, cep.value, endereco.value, complemento.value, bairro.value, cidade.value, estado.value, Github.value, academia.value, professor.value, termoslegais.value, quero-info.value)">Salvar</button>
+                    
+            </div>
+        </form>
+</div>
+
+
+        
+<table class="table" id="tabela-dados">
+    <thead>
+        <tr>
+            <th colspan="2">Dados submetidos pelo formulário</th>
+        </tr>
+
+    </thead>
+
+    <tbody>
+        <tr>
+            <th>Nome</th>
+            <td id="nome"></td>
+        </tr>
+        <tr>
+            <th>Sobrenome</th>
+            <td id="nome"></td>
+        </tr>
+        <tr>
+            <th>E-mail</th>
+            <td id="nome"></td>
+        </tr>
+        <tr>
+            <th>Login</th>
+            <td id="nome"></td>
+        </tr>
+        <tr>
+            <th>Senha</th>
+            <td id="nome"></td>
+        </tr>
+        <tr>
+            <th>CEP</th>
+            <td id="nome"></td>
+        </tr>
+        <tr>
+            <th>Endereço</th>
+            <td id="nome"></td>
+        </tr>
+        <tr>
+            <th>Complemento</th>
+            <td id="nome"></td>
+        </tr>
+        <tr>
+            <th>Bairro</th>
+            <td id="nome"></td>
+        </tr>
+        <tr>
+            <th>Cidade</th>
+            <td id="nome"></td>
+        </tr>
+        <tr>
+            <th>Estado</th>
+            <td id="nome"></td>
+        </tr>
+        <tr>
+            <th>GitHub</th>
+            <td id="nome"></td>
+        </tr>
+        <tr>
+            <th>Academia</th>
+            <td id="nome"></td>
+        </tr>
+        <tr>
+            <th>Professor</th>
+            <td id="nome"></td>
+        </tr>
+        <tr>
+            <th>Termos legais</th>
+            <td id="nome"></td>
+        </tr>
+        <tr>
+            <th>Informativo</th>
+            <td id="nome"></td>
+        </tr>
+
+    </tbody>
+
+
+
+</table>
+</div>
+
+                
+
+
+
+          
+
+
+
+
+</body>
+</html>
