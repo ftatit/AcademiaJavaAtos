@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="https:/thymeleaf.org">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/images/logo-fifa-qatar-2022.png">
+
+<title>Copa do Mundo - Qatar 2022</title>
+
+<!-- Apontando Bootstrap e JQuery:
+<link rel="stylesheet"
+	th:href="@{/bootstrap-5.1.3-dist/css/bootstrap.min.css}">
+<script th:src="@{/jquery-3.6.0-dist/jquery-3.6.0.min.js}"></script>
+<script th:src="@{/bootstrap-5.1.3-dist/js/bootstrap.min.js}"></script> -->
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css"
+	integrity="sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w=="
+	crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="jquery-3.6.0.min.js"></script>
+
+<link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+
+<body>
+
+	<!-- Adicionando a Navbar: -->
+	<div th:replace="fragments/publica-nav :: nav"></div>
+
+
+
+	<div class="container">
+		<div class="row">
+			<div class="col">
+
+				<h2 th:text="${msnBemVindo}"></h2>
+
+
+				<div>
+					<main>
+						<section>
+							<br />
+
+							<p>
+								Seja bem-vindo ao site da <strong>Copa do Mundo Qatar –
+									2022</strong>. Aqui você terá acesso a informações sobre os grupos
+								formados, datas dos jogos, locais das partidas, resultados dos
+								jogos, além de poder participar do <strong>Bolão</strong>. Basta
+								se cadastrar.
+							</p>
+
+							<img class="imagem1" src="images/logo-fifa-qatar-2022.png">
+
+
+
+
+
+							<p>
+								Está será a primeira edição de Copa do Mundo a ser realizada no
+								outono, época do ano correspondente no hemisfério norte, em
+								função das altíssimas temperaturas que atingem o Oriente Médio
+								no meio do ano. A bola rola entre os dias <strong>21 de
+									novembro e 18 de dezembro</strong>.
+							</p>
+
+							<h2>
+								<strong>Mascote da Copa: La'eeb</strong> <img class="imagem1"
+									src="images/laeeb-03.jpeg">
+							</h2>
+							<p>
+								Logo no início do sorteio dos grupos da Copa do Mundo de 2022,
+								realizado em Doha, o Qatar revelou o mascote do torneio <strong>La'eeb</strong>.
+								Essa palavra árabe significa "jogador super habilidoso", de
+								acordo com a Fifa.
+
+							</p>
+							<p>O mascote oficial da Copa do Mundo de 2022 está cheio de
+								energia e vai trazer a alegria do futebol para todos. La’eeb
+								acredita que "Agora é Tudo" e encoraja todos a acreditarem em si
+								mesmos — divulgou a Fifa em suas redes sociais.</p>
+
+
+
+
+							<h2>
+								<strong>Quantas seleções irão jogar?</strong>
+							</h2>
+							<p>A FIFA desistiu de ampliar a Copa do Mundo, no Qatar, com
+								48 seleções. Desta forma, o torneio, terá 32 participantes, de
+								modo que a América do Sul continua com suas quatro vagas e meia
+								para esta próxima edição. A proposta foi adiada para acontecer
+								somente no Mundial de 2026.
+							<ul>
+								<li>País anfitrião: 1 (Qatar)</li>
+								<li>UEFA (Europa): 13 representantes</li>
+								<li>Conmebol (América do Sul): 4 ou 5 representantes*</li>
+								<li>Concacaf (América Central e do Norte): 3 ou 5
+									representantes*</li>
+								<li>CAF (África): 5 representantes</li>
+								<li>AFC (Ásia): 4 ou 5 representantes*</li>
+								<li>OFC (Oceania): nenhum ou um representante*​</li>
+								<ul>*Será mantida a disputa por vagas entre candidatos da
+									Conmebol e OFC, AFC e Concacaf.
+								</ul>
+							</ul>
+							</p>
+
+							<h2>
+								<strong>Quantos estádios vão receber a Copa do Mundo
+									2022?</strong>
+							</h2>
+							<p>Serão oito estádios espalhados pelas sete cidades
+								escolhidas como sedes da competição. Conhecido como um dos
+								países mais ricos do mundo, o Qatar promete realizar um dos
+								Mundiais com as arenas mais luxuosas da história.
+							<ul>
+								<li>Estádio Nacional de Lusail (Lusail)</li>
+								<li>Estádio Al-Janoub (Al-Wakrah)</li>
+								<li>Estádio Al Thumama (Doha)</li>
+								<li>Estádio Internacional Khalifa (Doha)</li>
+								<li>Estádio Al-Bayt (Al-Khor)</li>
+
+								<li>Estádio Al-Rayyan (Ahmed Bin Ali)</li>
+								<li>Estádio Ras Abu Aboud (Estádio 974 - Doha)</li>
+								<li>Estádio da Cidade da Educação</li>
+							</ul>
+							<p>
+								Para saber mais sobre cada um deles, basta acessar a página <strong>Estádios</strong>.
+							</p>
+
+							<h2>
+								<strong>O que os torcedores da Copa do Mundo podem
+									esperar do Qatar?</strong>
+							</h2>
+
+							<p>O Qatar, que tem uma população de 2,9 milhões, é um dos
+								países mais ricos do mundo por causa de suas exportações de
+								petróleo e gás. O país construiu sete estádios especificamente
+								para o torneio e uma cidade totalmente nova para sediar a
+								partida final.</p>
+							<p>Mais de 100 novos hotéis, um metrô e novas estradas também
+								estão sendo construídos. O comitê organizador do torneio estima
+								que 1,5 milhão de pessoas estarão no país para a Copa.</p>
+							<p>O Qatar é um país muçulmano conservador, e os torcedores
+								estão sendo alertados para terem cuidados especiais com seu
+								comportamento.</p>
+							<p>Existem restrições rígidas ao consumo de álcool, que só
+								costuma ser vendido em bares de hotéis de luxo. Um copo de
+								cerveja custa até US$ 13 (cerca de R$ 65).</p>
+							<p>No entanto, os organizadores dizem que haverá venda de
+								álcool em áreas especiais para torcedores durante o torneio.</p>
+
+							<img class="imagem1" src="images/acomodation.jpg">
+
+						</section>
+
+
+
+					</main>
+
+
+				</div>
+
+
+
+
+			</div>
+		</div>
+	</div>
+
+
+
+</body>
+<div class="rodape">
+	<footer> Desenvolvido por Flavio Tatit - Academia Java
+		UFN/ATOS </footer>
+</div>
+<br />
+</html>

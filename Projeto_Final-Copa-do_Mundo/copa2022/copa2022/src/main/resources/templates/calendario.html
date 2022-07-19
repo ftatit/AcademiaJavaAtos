@@ -1,0 +1,1678 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="https:/thymeleaf.org">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/images/logo-fifa-qatar-2022.png">
+<title>Calendário de jogos</title>
+
+<!-- Apontando Bootstrap e JQuery: -->
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css"
+	integrity="sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w=="
+	crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="jquery-3.6.0.min.js"></script>
+
+
+
+
+
+<style>
+#tabela-grupos {
+	background-color: rgba(215, 215, 215, 0.507);
+	align-items: center;
+	justify-content: center;
+	margin: 30px auto;
+	border-radius: 20px;
+	border: 2px solid #555;
+	text-align: center;
+}
+
+#tabela-grupos thead {
+	text-transform: uppercase;
+}
+
+h2 {
+	color: blue;
+}
+
+h3 {
+	color: red;
+}
+
+h4 {
+	text-decoration: underline;
+}
+</style>
+
+</head>
+
+
+<body>
+
+	<!-- Adicionando a Navbar: -->
+	<div th:replace="fragments/publica-nav :: nav"></div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col"></div>
+			<div class="container">
+				<div class="row">
+					<br>
+				</div>
+				<h1>Calendário de jogos:</h1>
+				<br>
+				<h2>Fase de Grupos:</h2>
+
+				<div class="col">
+
+					<h4>21 / 11 / 2022:</h4>
+
+					<table class="table table-striped" id="tabela-grupos">
+						<thead>
+							<tr>
+								<th>Id Jogo</th>
+								<th>Grupo</th>
+								<th>Time 1</th>
+
+								<th></th>
+
+								<th>Time 2</th>
+								<th>Data</th>
+								<th>Hora</th>
+								<th>Estádio</th>
+							</tr>
+						</thead>
+
+						<tbody>
+
+
+							<tr>
+								<td><span>1</span></td>
+								<td><span>A</span></td>
+
+								<td><span>Qatar</span></td>
+
+								<td><span>x</span></td>
+
+								<td><span>Equador</span></td>
+								<td><span>21/11/2022</span></td>
+								<td><span>13:00:00</span></td>
+
+								<td><span>Al Bayt</span></td>
+
+
+
+							</tr>
+
+							<tr>
+								<td><span>2</span></td>
+								<td><span>A</span></td>
+
+								<td><span>Senegal</span></td>
+
+								<td><span>x</span></td>
+
+								<td><span>Holanda</span></td>
+								<td><span>21/11/2022</span></td>
+								<td><span>07:00:00</span></td>
+
+								<td><span>Al Thumama</span></td>
+
+
+
+							</tr>
+
+							<tr>
+								<td><span>3</span></td>
+								<td><span>B</span></td>
+
+								<td><span>Inglaterra</span></td>
+
+								<td><span>x</span></td>
+
+								<td><span>Iran</span></td>
+								<td><span>21/11/2022</span></td>
+								<td><span>10:00:00</span></td>
+
+								<td><span>Khalifa International</span></td>
+
+
+
+							</tr>
+
+							<tr>
+								<td><span>4</span></td>
+								<td><span>B</span></td>
+
+								<td><span>Estados Unidos</span></td>
+
+								<td><span>x</span></td>
+
+								<td><span>País de Gales</span></td>
+								<td><span>21/11/2022</span></td>
+								<td><span>16:00:00</span></td>
+
+								<td><span>Ahamad Bin Ali</span></td>
+
+							</tr>
+						</tbody>
+					</table>
+
+					<br>
+
+					<h4>22 / 11 / 2022:</h4>
+
+					<table class="table table-striped" id="tabela-grupos">
+						<thead>
+							<tr>
+								<th>Id Jogo</th>
+								<th>Grupo</th>
+								<th>Time 1</th>
+
+								<th></th>
+
+								<th>Time 2</th>
+								<th>Data</th>
+								<th>Hora</th>
+								<th>Estádio</th>
+							</tr>
+						</thead>
+
+						<tbody>
+
+
+							<tr>
+								<td><span>5</span></td>
+								<td><span>D</span></td>
+
+								<td><span>França</span></td>
+
+								<td><span>x</span></td>
+
+								<td><span>Austrália</span></td>
+								<td><span>22/11/2022</span></td>
+								<td><span>16:00:00</span></td>
+
+								<td><span>Al Janoub</span></td>
+
+
+
+							</tr>
+
+							<tr>
+								<td><span>6</span></td>
+								<td><span>D</span></td>
+
+								<td><span>Dinamarca</span></td>
+
+								<td><span>x</span></td>
+
+								<td><span>Tunísia</span></td>
+								<td><span>22/11/2022</span></td>
+								<td><span>10:00:00</span></td>
+
+								<td><span>Education City</span></td>
+
+
+
+							</tr>
+
+							<tr>
+								<td><span>7</span></td>
+								<td><span>C</span></td>
+
+								<td><span>México</span></td>
+
+								<td><span>x</span></td>
+
+								<td><span>Polônia</span></td>
+								<td><span>22/11/2022</span></td>
+								<td><span>13:00:00</span></td>
+
+								<td><span>Stadium 974</span></td>
+
+
+
+							</tr>
+
+							<tr>
+								<td><span>8</span></td>
+								<td><span>C</span></td>
+
+								<td><span>Argentina</span></td>
+
+								<td><span>x</span></td>
+
+								<td><span>Arábia Saudita</span></td>
+								<td><span>22/11/2022</span></td>
+								<td><span>07:00:00</span></td>
+
+								<td><span>Lusail</span></td>
+
+
+							</tr>
+
+
+
+
+						</tbody>
+					</table>
+					<br>
+					<h4>23 / 11 / 2022:</h4>
+
+					<table class="table table-striped" id="tabela-grupos">
+						<thead>
+							<tr>
+								<th>Id Jogo</th>
+								<th>Grupo</th>
+								<th>Time 1</th>
+								<th></th>
+								<th>Time 2</th>
+								<th>Data</th>
+								<th>Hora</th>
+								<th>Estádio</th>
+							</tr>
+						</thead>
+
+						<tbody>
+
+							<tr>
+								<td><span>9</span></td>
+								<td><span>F</span></td>
+								<td><span>Bélgica</span></td>
+								<td><span>x</span></td>
+								<td><span>Canadá</span></td>
+								<td><span>23/11/2022</span></td>
+								<td><span>16:00:00</span></td>
+								<td><span>Ahamad Bin Ali</span></td>
+							</tr>
+
+							<tr>
+								<td><span>10</span></td>
+								<td><span>E</span></td>
+								<td><span>Espanha</span></td>
+								<td><span>x</span></td>
+								<td><span>Costa Rica</span></td>
+								<td><span>23/11/2022</span></td>
+								<td><span>13:00:00</span></td>
+								<td><span>Al Thumama</span></td>
+							</tr>
+							<tr>
+								<td><span>11</span></td>
+								<td><span>E</span></td>
+								<td><span>Alemanha</span></td>
+								<td><span>x</span></td>
+								<td><span>Japão</span></td>
+								<td><span>23/11/2022</span></td>
+								<td><span>10:00:00</span></td>
+								<td><span>Khalifa International</span></td>
+							</tr>
+							<tr>
+								<td><span>12</span></td>
+								<td><span>F</span></td>
+								<td><span>Marrocos</span></td>
+								<td><span>x</span></td>
+								<td><span>Croácia</span></td>
+								<td><span>23/11/2022</span></td>
+								<td><span>07:00:00</span></td>
+								<td><span>Ahamad Bin Ali</span></td>
+							</tr>
+						</tbody>
+					</table>
+					<br>
+					<h4>24 / 11 / 2022:</h4>
+
+					<table class="table table-striped" id="tabela-grupos">
+						<thead>
+							<tr>
+								<th>Id Jogo</th>
+								<th>Grupo</th>
+								<th>Time 1</th>
+								<th></th>
+								<th>Time 2</th>
+								<th>Data</th>
+								<th>Hora</th>
+								<th>Estádio</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><span>13</span></td>
+								<td><span>G</span></td>
+								<td><span>Suiça</span></td>
+								<td><span>x</span></td>
+								<td><span>Camarões</span></td>
+								<td><span>24/11/2022</span></td>
+								<td><span>07:00:00</span></td>
+								<td><span>Al Janoub</span></td>
+							</tr>
+							<tr>
+								<td><span>14</span></td>
+								<td><span>H</span></td>
+								<td><span>Uruguai</span></td>
+								<td><span>x</span></td>
+								<td><span>Coreia do Sul</span></td>
+								<td><span>24/11/2022</span></td>
+								<td><span>10:00:00</span></td>
+								<td><span>Education City</span></td>
+							</tr>
+							<tr>
+								<td><span>15</span></td>
+								<td><span>H</span></td>
+								<td><span>Portugal</span></td>
+								<td><span>x</span></td>
+								<td><span>Gana</span></td>
+								<td><span>24/11/2022</span></td>
+								<td><span>13:00:00</span></td>
+								<td><span>Stadium 974</span></td>
+							</tr>
+							<tr>
+								<td><span>16</span></td>
+								<td><span>G</span></td>
+								<td><span>Brasil</span></td>
+								<td><span>x</span></td>
+								<td><span>Sérvia</span></td>
+								<td><span>24/11/2022</span></td>
+								<td><span>16:00:00</span></td>
+								<td><span>Lusail</span></td>
+							</tr>
+						</tbody>
+					</table>
+					<br>
+					<h4>25 / 11 / 2022:</h4>
+
+					<table class="table table-striped" id="tabela-grupos">
+						<thead>
+							<tr>
+								<th>Id Jogo</th>
+								<th>Grupo</th>
+								<th>Time 1</th>
+								<th></th>
+								<th>Time 2</th>
+								<th>Data</th>
+								<th>Hora</th>
+								<th>Estádio</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><span>17</span></td>
+								<td><span>B</span></td>
+								<td><span>País de Gales</span></td>
+								<td><span>x</span></td>
+								<td><span>Iran</span></td>
+								<td><span>25/11/2022</span></td>
+								<td><span>07:00:00</span></td>
+								<td><span>Ahamad Bin Ali</span></td>
+							</tr>
+							<tr>
+								<td><span>18</span></td>
+								<td><span>A</span></td>
+								<td><span>Qatar</span></td>
+								<td><span>x</span></td>
+								<td><span>Senegal</span></td>
+								<td><span>25/11/2022</span></td>
+								<td><span>10:00:00</span></td>
+								<td><span>Al Thumama</span></td>
+							</tr>
+							<tr>
+								<td><span>19</span></td>
+								<td><span>A</span></td>
+								<td><span>Holanda</span></td>
+								<td><span>x</span></td>
+								<td><span>Equador</span></td>
+								<td><span>25/11/2022</span></td>
+								<td><span>13:00:00</span></td>
+								<td><span>Khalifa International</span></td>
+							</tr>
+							<tr>
+								<td><span>20</span></td>
+								<td><span>B</span></td>
+								<td><span>Inglaterra</span></td>
+								<td><span>x</span></td>
+								<td><span>Estados Unidos</span></td>
+								<td><span>25/11/2022</span></td>
+								<td><span>16:00:00</span></td>
+								<td><span>Al Bayt</span></td>
+							</tr>
+						</tbody>
+					</table>
+					<br>
+					<h4>26 / 11 / 2022:</h4>
+
+					<table class="table table-striped" id="tabela-grupos">
+						<thead>
+							<tr>
+								<th>Id Jogo</th>
+								<th>Grupo</th>
+								<th>Time 1</th>
+								<th></th>
+								<th>Time 2</th>
+								<th>Data</th>
+								<th>Hora</th>
+								<th>Estádio</th>
+							</tr>
+						</thead>
+
+						<tbody>
+
+							<tr>
+								<td><span>21</span></td>
+								<td><span>D</span></td>
+
+								<td><span>Tunísia</span></td>
+
+								<td><span>x</span></td>
+
+								<td><span>Austrália</span></td>
+								<td><span>26/11/2022</span></td>
+								<td><span>07:00:00</span></td>
+
+								<td><span>Al Janoub</span></td>
+
+
+
+							</tr>
+
+							<tr>
+								<td><span>22</span></td>
+								<td><span>C</span></td>
+
+								<td><span>Polônia</span></td>
+
+								<td><span>x</span></td>
+
+								<td><span>Arábia Saudita</span></td>
+								<td><span>26/11/2022</span></td>
+								<td><span>10:00:00</span></td>
+
+								<td><span>Education City</span></td>
+
+
+
+							</tr>
+
+							<tr>
+								<td><span>23</span></td>
+								<td><span>D</span></td>
+
+								<td><span>França</span></td>
+
+								<td><span>x</span></td>
+
+								<td><span>Dinamarca</span></td>
+								<td><span>26/11/2022</span></td>
+								<td><span>13:00:00</span></td>
+
+								<td><span>Stadium 974</span></td>
+
+
+
+							</tr>
+
+							<tr>
+								<td><span>24</span></td>
+								<td><span>C</span></td>
+
+								<td><span>Argentina</span></td>
+
+								<td><span>x</span></td>
+
+								<td><span>México</span></td>
+								<td><span>26/11/2022</span></td>
+								<td><span>16:00:00</span></td>
+
+								<td><span>Lusail</span></td>
+
+
+
+							</tr>
+
+
+
+						</tbody>
+					</table>
+					<br>
+					<h4>27 / 11 / 2022:</h4>
+
+					<table class="table table-striped" id="tabela-grupos">
+						<thead>
+							<tr>
+								<th>Id Jogo</th>
+								<th>Grupo</th>
+								<th>Time 1</th>
+
+								<th></th>
+
+								<th>Time 2</th>
+								<th>Data</th>
+								<th>Hora</th>
+								<th>Estádio</th>
+							</tr>
+						</thead>
+
+						<tbody>
+
+							<tr>
+								<td><span>25</span></td>
+								<td><span>E</span></td>
+
+								<td><span>Japão</span></td>
+
+								<td><span>x</span></td>
+
+								<td><span>Costa Rica</span></td>
+								<td><span>27/11/2022</span></td>
+								<td><span>07:00:00</span></td>
+
+								<td><span>Ahamad Bin Ali</span></td>
+
+
+
+							</tr>
+
+							<tr>
+								<td><span>26</span></td>
+								<td><span>F</span></td>
+
+								<td><span>Bélgica</span></td>
+
+								<td><span>x</span></td>
+
+								<td><span>Marrocos</span></td>
+								<td><span>27/11/2022</span></td>
+								<td><span>10:00:00</span></td>
+
+								<td><span>Al Thumama</span></td>
+
+
+
+							</tr>
+
+							<tr>
+								<td><span>27</span></td>
+								<td><span>F</span></td>
+
+								<td><span>Croácia</span></td>
+
+								<td><span>x</span></td>
+
+								<td><span>Canadá</span></td>
+								<td><span>27/11/2022</span></td>
+								<td><span>13:00:00</span></td>
+
+								<td><span>Khalifa International</span></td>
+
+
+
+							</tr>
+
+							<tr>
+								<td><span>28</span></td>
+								<td><span>E</span></td>
+
+								<td><span>Espanha</span></td>
+
+								<td><span>x</span></td>
+
+								<td><span>Alemanha</span></td>
+								<td><span>27/11/2022</span></td>
+								<td><span>16:00:00</span></td>
+
+								<td><span>Al Bayt</span></td>
+
+
+
+							</tr>
+
+
+
+
+						</tbody>
+					</table>
+					<br>
+					<h4>28 / 11 / 2022:</h4>
+
+					<table class="table table-striped" id="tabela-grupos">
+						<thead>
+							<tr>
+								<th>Id Jogo</th>
+								<th>Grupo</th>
+								<th>Time 1</th>
+
+								<th></th>
+
+								<th>Time 2</th>
+								<th>Data</th>
+								<th>Hora</th>
+								<th>Estádio</th>
+							</tr>
+						</thead>
+
+						<tbody>
+
+							<tr>
+								<td><span>29</span></td>
+								<td><span>G</span></td>
+
+								<td><span>Camarões</span></td>
+
+								<td><span>x</span></td>
+
+								<td><span>Sérvia</span></td>
+								<td><span>28/11/2022</span></td>
+								<td><span>07:00:00</span></td>
+
+								<td><span>Al Janoub</span></td>
+
+
+
+							</tr>
+
+							<tr>
+								<td><span>30</span></td>
+								<td><span>H</span></td>
+
+								<td><span>Coreia do Sul</span></td>
+
+								<td><span>x</span></td>
+
+								<td><span>Gana</span></td>
+								<td><span>28/11/2022</span></td>
+								<td><span>10:00:00</span></td>
+
+								<td><span>Education City</span></td>
+
+
+
+							</tr>
+
+							<tr>
+								<td><span>31</span></td>
+								<td><span>G</span></td>
+
+								<td><span>Brasil</span></td>
+
+								<td><span>x</span></td>
+
+								<td><span>Suiça</span></td>
+								<td><span>28/11/2022</span></td>
+								<td><span>13:00:00</span></td>
+
+								<td><span>Stadium 974</span></td>
+
+
+
+							</tr>
+
+							<tr>
+								<td><span>32</span></td>
+								<td><span>H</span></td>
+
+								<td><span>Portugal</span></td>
+
+								<td><span>x</span></td>
+
+								<td><span>Uruguai</span></td>
+								<td><span>28/11/2022</span></td>
+								<td><span>16:00:00</span></td>
+
+								<td><span>Lusail</span></td>
+
+
+
+							</tr>
+
+
+
+
+						</tbody>
+					</table>
+					<br>
+					<h4>29 / 11 / 2022:</h4>
+
+					<table class="table table-striped" id="tabela-grupos">
+						<thead>
+							<tr>
+								<th>Id Jogo</th>
+								<th>Grupo</th>
+								<th>Time 1</th>
+
+								<th></th>
+
+								<th>Time 2</th>
+								<th>Data</th>
+								<th>Hora</th>
+								<th>Estádio</th>
+							</tr>
+						</thead>
+
+						<tbody>
+
+							<tr>
+								<td><span>33</span></td>
+								<td><span>B</span></td>
+
+								<td><span>País de Gales</span></td>
+
+								<td><span>x</span></td>
+
+								<td><span>Inglaterra</span></td>
+								<td><span>29/11/2022</span></td>
+								<td><span>16:00:00</span></td>
+
+								<td><span>Ahamad Bin Ali</span></td>
+
+
+
+							</tr>
+
+							<tr>
+								<td><span>34</span></td>
+								<td><span>B</span></td>
+
+								<td><span>Iran</span></td>
+
+								<td><span>x</span></td>
+
+								<td><span>Estados Unidos</span></td>
+								<td><span>29/11/2022</span></td>
+								<td><span>16:00:00</span></td>
+
+								<td><span>Al Thumama</span></td>
+
+
+
+							</tr>
+
+							<tr>
+								<td><span>35</span></td>
+								<td><span>A</span></td>
+
+								<td><span>Equador</span></td>
+
+								<td><span>x</span></td>
+
+								<td><span>Senegal</span></td>
+								<td><span>29/11/2022</span></td>
+								<td><span>12:00:00</span></td>
+
+								<td><span>Khalifa International</span></td>
+
+
+
+							</tr>
+
+							<tr>
+								<td><span>36</span></td>
+								<td><span>A</span></td>
+
+								<td><span>Holanda</span></td>
+
+								<td><span>x</span></td>
+
+								<td><span>Qatar</span></td>
+								<td><span>29/11/2022</span></td>
+								<td><span>12:00:00</span></td>
+
+								<td><span>Al Bayt</span></td>
+
+
+
+							</tr>
+
+
+
+						</tbody>
+					</table>
+					<br>
+					<h4>30 / 11 / 2022:</h4>
+
+					<table class="table table-striped" id="tabela-grupos">
+						<thead>
+							<tr>
+								<th>Id Jogo</th>
+								<th>Grupo</th>
+								<th>Time 1</th>
+
+								<th></th>
+
+								<th>Time 2</th>
+								<th>Data</th>
+								<th>Hora</th>
+								<th>Estádio</th>
+							</tr>
+						</thead>
+
+						<tbody>
+
+
+							<tr>
+								<td><span>37</span></td>
+								<td><span>D</span></td>
+
+								<td><span>Austrália</span></td>
+
+								<td><span>x</span></td>
+
+								<td><span>Dinamarca</span></td>
+								<td><span>30/11/2022</span></td>
+								<td><span>12:00:00</span></td>
+
+								<td><span>Al Janoub</span></td>
+
+
+
+							</tr>
+
+							<tr>
+								<td><span>38</span></td>
+								<td><span>D</span></td>
+
+								<td><span>Tunísia</span></td>
+
+								<td><span>x</span></td>
+
+								<td><span>França</span></td>
+								<td><span>30/11/2022</span></td>
+								<td><span>12:00:00</span></td>
+
+								<td><span>Education City</span></td>
+
+
+
+							</tr>
+
+							<tr>
+								<td><span>39</span></td>
+								<td><span>C</span></td>
+
+								<td><span>Polônia</span></td>
+
+								<td><span>x</span></td>
+
+								<td><span>Argentina</span></td>
+								<td><span>30/11/2022</span></td>
+								<td><span>16:00:00</span></td>
+
+								<td><span>Stadium 974</span></td>
+
+
+
+							</tr>
+
+							<tr>
+								<td><span>40</span></td>
+								<td><span>C</span></td>
+
+								<td><span>Arábia Saudita</span></td>
+
+								<td><span>x</span></td>
+
+								<td><span>México</span></td>
+								<td><span>30/11/2022</span></td>
+								<td><span>16:00:00</span></td>
+
+								<td><span>Lusail</span></td>
+
+
+
+							</tr>
+
+
+
+
+						</tbody>
+					</table>
+					<br>
+					<h4>01 / 12 / 2022:</h4>
+
+					<table class="table table-striped" id="tabela-grupos">
+						<thead>
+							<tr>
+								<th>Id Jogo</th>
+								<th>Grupo</th>
+								<th>Time 1</th>
+
+								<th></th>
+
+								<th>Time 2</th>
+								<th>Data</th>
+								<th>Hora</th>
+								<th>Estádio</th>
+							</tr>
+						</thead>
+
+						<tbody>
+
+							<tr>
+								<td><span>41</span></td>
+								<td><span>F</span></td>
+
+								<td><span>Croácia</span></td>
+
+								<td><span>x</span></td>
+
+								<td><span>Bélgica</span></td>
+								<td><span>01/12/2022</span></td>
+								<td><span>12:00:00</span></td>
+
+								<td><span>Ahamad Bin Ali</span></td>
+
+
+
+							</tr>
+
+
+
+							<tr>
+								<td><span>42</span></td>
+								<td><span>F</span></td>
+
+								<td><span>Canadá</span></td>
+
+								<td><span>x</span></td>
+
+								<td><span>Marrocos</span></td>
+								<td><span>01/12/2022</span></td>
+								<td><span>12:00:00</span></td>
+
+								<td><span>Al Thumama</span></td>
+
+
+							</tr>
+
+							<tr>
+								<td><span>43</span></td>
+								<td><span>E</span></td>
+
+								<td><span>Japão</span></td>
+
+								<td><span>x</span></td>
+
+								<td><span>Espanha</span></td>
+								<td><span>01/12/2022</span></td>
+								<td><span>16:00:00</span></td>
+
+								<td><span>Khalifa International</span></td>
+
+
+
+							</tr>
+
+							<tr>
+								<td><span>44</span></td>
+								<td><span>E</span></td>
+
+								<td><span>Costa Rica</span></td>
+
+								<td><span>x</span></td>
+
+								<td><span>Alemanha</span></td>
+								<td><span>01/12/2022</span></td>
+								<td><span>16:00:00</span></td>
+
+								<td><span>Al Bayt</span></td>
+
+
+
+							</tr>
+
+
+
+						</tbody>
+					</table>
+					<br>
+					<h4>02 / 12 / 2022:</h4>
+
+					<table class="table table-striped" id="tabela-grupos">
+						<thead>
+							<tr>
+								<th>Id Jogo</th>
+								<th>Grupo</th>
+								<th>Time 1</th>
+
+								<th></th>
+
+								<th>Time 2</th>
+								<th>Data</th>
+								<th>Hora</th>
+								<th>Estádio</th>
+							</tr>
+						</thead>
+
+						<tbody>
+
+							<tr>
+								<td><span>45</span></td>
+								<td><span>H</span></td>
+
+								<td><span>Gana</span></td>
+
+								<td><span>x</span></td>
+
+								<td><span>Uruguai</span></td>
+								<td><span>02/12/2022</span></td>
+								<td><span>12:00:00</span></td>
+
+								<td><span>Al Janoub</span></td>
+
+
+
+							</tr>
+
+							<tr>
+								<td><span>46</span></td>
+								<td><span>H</span></td>
+
+								<td><span>Coreia do Sul</span></td>
+
+								<td><span>x</span></td>
+
+								<td><span>Portugal</span></td>
+								<td><span>02/12/2022</span></td>
+								<td><span>12:00:00</span></td>
+
+								<td><span>Education City</span></td>
+
+
+							</tr>
+
+							<tr>
+								<td><span>47</span></td>
+								<td><span>G</span></td>
+
+								<td><span>Sérvia</span></td>
+
+								<td><span>x</span></td>
+
+								<td><span>Suiça</span></td>
+								<td><span>02/12/2022</span></td>
+								<td><span>16:00:00</span></td>
+
+								<td><span>Stadium 974</span></td>
+
+
+
+							</tr>
+
+							<tr>
+								<td><span>48</span></td>
+								<td><span>G</span></td>
+
+								<td><span>Camarões</span></td>
+
+								<td><span>x</span></td>
+
+								<td><span>Brasil</span></td>
+								<td><span>02/12/2022</span></td>
+								<td><span>16:00:00</span></td>
+
+								<td><span>Lusail</span></td>
+
+
+
+							</tr>
+
+
+
+						</tbody>
+
+
+
+					</table>
+					<br>
+					<h2>Segunda Fase (mata-mata):</h2>
+					<br>
+					<h3>Oitavas de final:</h3>
+
+					<h4>03 / 12 / 2022:</h4>
+
+					<table class="table table-striped" id="tabela-grupos">
+						<thead>
+							<tr>
+								<th>Id Jogo</th>
+								<th>Grupo</th>
+								<th>Time 1</th>
+
+								<th></th>
+
+								<th>Time 2</th>
+								<th>Data</th>
+								<th>Hora</th>
+								<th>Estádio</th>
+							</tr>
+						</thead>
+
+						<tbody>
+
+
+							<tr>
+								<td><span>49</span></td>
+								<td><span>Oitavas de final</span></td>
+
+								<td><span>1º do Grupo A</span></td>
+
+								<td><span>x</span></td>
+
+								<td><span>2º do Grupo B</span></td>
+								<td><span>03/12/2022</span></td>
+								<td><span>12:00:00</span></td>
+
+								<td><span>Al Bayt</span></td>
+
+
+
+							</tr>
+
+							<tr>
+								<td><span>50</span></td>
+								<td><span>Oitavas de final</span></td>
+
+								<td><span>1º do Grupo C</span></td>
+
+								<td><span>x</span></td>
+
+								<td><span>2º do Grupo D</span></td>
+								<td><span>03/12/2022</span></td>
+								<td><span>16:00:00</span></td>
+
+								<td><span>Ahamad Bin Ali</span></td>
+
+
+
+							</tr>
+
+						</tbody>
+					</table>
+					<br>
+					<h4>04 / 12 / 2022:</h4>
+
+					<table class="table table-striped" id="tabela-grupos">
+						<thead>
+							<tr>
+								<th>Id Jogo</th>
+								<th>Grupo</th>
+								<th>Time 1</th>
+
+								<th></th>
+
+								<th>Time 2</th>
+								<th>Data</th>
+								<th>Hora</th>
+								<th>Estádio</th>
+							</tr>
+						</thead>
+
+						<tbody>
+
+							<tr>
+								<td><span>51</span></td>
+								<td><span>Oitavas de final</span></td>
+
+								<td><span>1º do Grupo B</span></td>
+
+								<td><span>x</span></td>
+
+								<td><span>2º do Grupo A</span></td>
+								<td><span>04/12/2022</span></td>
+								<td><span>16:00:00</span></td>
+
+								<td><span>Al Bayt</span></td>
+
+
+
+							</tr>
+
+							<tr>
+								<td><span>52</span></td>
+								<td><span>Oitavas de final</span></td>
+
+								<td><span>1º do Grupo D</span></td>
+
+								<td><span>x</span></td>
+
+								<td><span>2º do Grupo C</span></td>
+								<td><span>04/12/2022</span></td>
+								<td><span>12:00:00</span></td>
+
+								<td><span>Al Thumama</span></td>
+
+
+
+							</tr>
+
+						</tbody>
+					</table>
+					<br>
+					<h4>05 / 12 / 2022:</h4>
+
+					<table class="table table-striped" id="tabela-grupos">
+						<thead>
+							<tr>
+								<th>Id Jogo</th>
+								<th>Grupo</th>
+								<th>Time 1</th>
+
+								<th></th>
+
+								<th>Time 2</th>
+								<th>Data</th>
+								<th>Hora</th>
+								<th>Estádio</th>
+							</tr>
+						</thead>
+
+						<tbody>
+
+							<tr>
+								<td><span>53</span></td>
+								<td><span>Oitavas de final</span></td>
+
+								<td><span>1º do Grupo E</span></td>
+
+								<td><span>x</span></td>
+
+								<td><span>2º do Grupo F</span></td>
+								<td><span>05/12/2022</span></td>
+								<td><span>12:00:00</span></td>
+
+								<td><span>Al Janoub</span></td>
+
+
+
+							</tr>
+
+							<tr>
+								<td><span>54</span></td>
+								<td><span>Oitavas de final</span></td>
+
+								<td><span>1º do Grupo G</span></td>
+
+								<td><span>x</span></td>
+
+								<td><span>2º do Grupo H</span></td>
+								<td><span>05/12/2022</span></td>
+								<td><span>16:00:00</span></td>
+
+								<td><span>Stadium 974</span></td>
+
+
+
+							</tr>
+
+
+						</tbody>
+					</table>
+					<br>
+					<h4>06 / 12 / 2022:</h4>
+
+					<table class="table table-striped" id="tabela-grupos">
+						<thead>
+							<tr>
+								<th>Id Jogo</th>
+								<th>Grupo</th>
+								<th>Time 1</th>
+
+								<th></th>
+
+								<th>Time 2</th>
+								<th>Data</th>
+								<th>Hora</th>
+								<th>Estádio</th>
+							</tr>
+						</thead>
+
+						<tbody>
+
+							<tr>
+								<td><span>55</span></td>
+								<td><span>Oitavas de final</span></td>
+
+								<td><span>1º do Grupo F</span></td>
+
+								<td><span>x</span></td>
+
+								<td><span>2º do Grupo E</span></td>
+								<td><span>06/12/2022</span></td>
+								<td><span>12:00:00</span></td>
+
+								<td><span>Education City</span></td>
+
+
+
+							</tr>
+
+							<tr>
+								<td><span>56</span></td>
+								<td><span>Oitavas de final</span></td>
+
+								<td><span>1º do Grupo H</span></td>
+
+								<td><span>x</span></td>
+
+								<td><span>2º do Grupo G</span></td>
+								<td><span>06/12/2022</span></td>
+								<td><span>16:00:00</span></td>
+
+								<td><span>Lusail</span></td>
+
+
+
+							</tr>
+
+						</tbody>
+					</table>
+					<br>
+					<h3>Quartas de final:</h3>
+					<br>
+					<h4>09 / 12 / 2022:</h4>
+
+					<table class="table table-striped" id="tabela-grupos">
+						<thead>
+							<tr>
+								<th>Id Jogo</th>
+								<th>Grupo</th>
+								<th>Time 1</th>
+
+								<th></th>
+
+								<th>Time 2</th>
+								<th>Data</th>
+								<th>Hora</th>
+								<th>Estádio</th>
+							</tr>
+						</thead>
+
+						<tbody>
+
+							<tr>
+								<td><span>57</span></td>
+								<td><span>Quartas de final</span></td>
+
+								<td><span>Vencedor jogo nº49</span></td>
+
+								<td><span>x</span></td>
+
+								<td><span>Vencedor jogo nº50</span></td>
+								<td><span>09/12/2022</span></td>
+								<td><span>12:00:00</span></td>
+
+								<td><span>Lusail</span></td>
+
+
+
+							</tr>
+
+							<tr>
+								<td><span>58</span></td>
+								<td><span>Quartas de final</span></td>
+
+								<td><span>Vencedor jogo nº53</span></td>
+
+								<td><span>x</span></td>
+
+								<td><span>Vencedor jogo nº54</span></td>
+								<td><span>09/12/2022</span></td>
+								<td><span>16:00:00</span></td>
+
+								<td><span>Education City</span></td>
+
+
+
+							</tr>
+
+
+						</tbody>
+					</table>
+					<br>
+					<h4>10 / 12 / 2022:</h4>
+
+					<table class="table table-striped" id="tabela-grupos">
+						<thead>
+							<tr>
+								<th>Id Jogo</th>
+								<th>Grupo</th>
+								<th>Time 1</th>
+
+								<th></th>
+
+								<th>Time 2</th>
+								<th>Data</th>
+								<th>Hora</th>
+								<th>Estádio</th>
+							</tr>
+						</thead>
+
+						<tbody>
+
+							<tr>
+								<td><span>59</span></td>
+								<td><span>Quartas de final</span></td>
+
+								<td><span>Vencedor jogo nº51</span></td>
+
+								<td><span>x</span></td>
+
+								<td><span>Vencedor jogo nº52</span></td>
+								<td><span>10/12/2022</span></td>
+								<td><span>12:00:00</span></td>
+
+								<td><span>Al Bayt</span></td>
+
+
+
+							</tr>
+
+							<tr>
+								<td><span>60</span></td>
+								<td><span>Quartas de final</span></td>
+
+								<td><span>Vencedor jogo nº55</span></td>
+
+								<td><span>x</span></td>
+
+								<td><span>Vencedor jogo nº56</span></td>
+								<td><span>10/12/2022</span></td>
+								<td><span>16:00:00</span></td>
+
+								<td><span>Al Thumama</span></td>
+
+
+
+							</tr>
+
+
+						</tbody>
+					</table>
+					<br>
+					<h3>Semi de final:</h3>
+					<br>
+					<h4>13 / 12 / 2022:</h4>
+
+					<table class="table table-striped" id="tabela-grupos">
+						<thead>
+							<tr>
+								<th>Id Jogo</th>
+								<th>Grupo</th>
+								<th>Time 1</th>
+
+								<th></th>
+
+								<th>Time 2</th>
+								<th>Data</th>
+								<th>Hora</th>
+								<th>Estádio</th>
+							</tr>
+						</thead>
+
+						<tbody>
+
+							<tr>
+								<td><span>61</span></td>
+								<td><span>Semi final</span></td>
+
+								<td><span>Vencedor jogo nº57</span></td>
+
+								<td><span>x</span></td>
+
+								<td><span>Vencedor jogo nº58</span></td>
+								<td><span>13/12/2022</span></td>
+								<td><span>16:00:00</span></td>
+
+								<td><span>Lusail</span></td>
+
+
+
+							</tr>
+
+						</tbody>
+					</table>
+
+					<h4>14 / 12 / 2022:</h4>
+
+					<table class="table table-striped" id="tabela-grupos">
+						<thead>
+							<tr>
+								<th>Id Jogo</th>
+								<th>Grupo</th>
+								<th>Time 1</th>
+
+								<th></th>
+
+								<th>Time 2</th>
+								<th>Data</th>
+								<th>Hora</th>
+								<th>Estádio</th>
+							</tr>
+						</thead>
+
+						<tbody>
+
+							<tr>
+								<td><span>62</span></td>
+								<td><span>Semi final</span></td>
+
+								<td><span>Vencedor jogo nº59</span></td>
+
+								<td><span>x</span></td>
+
+								<td><span>Vencedor jogo nº60</span></td>
+								<td><span>14/12/2022</span></td>
+								<td><span>16:00:00</span></td>
+
+								<td><span>Al Bayt</span></td>
+
+
+
+							</tr>
+
+
+						</tbody>
+					</table>
+					<br>
+					<h3>Disputa pelo 3º lugar:</h3>
+					<br>
+					<h4>17 / 12 / 2022:</h4>
+
+					<table class="table table-striped" id="tabela-grupos">
+						<thead>
+							<tr>
+								<th>Id Jogo</th>
+								<th>Grupo</th>
+								<th>Time 1</th>
+
+								<th></th>
+
+								<th>Time 2</th>
+								<th>Data</th>
+								<th>Hora</th>
+								<th>Estádio</th>
+							</tr>
+						</thead>
+
+						<tbody>
+
+							<tr>
+								<td><span>63</span></td>
+								<td><span>Disputa - 3º lugar</span></td>
+
+								<td><span>Perdedor jogo nº61</span></td>
+
+								<td><span>x</span></td>
+
+								<td><span>Perdedor jogo nº62</span></td>
+								<td><span>17/12/2022</span></td>
+								<td><span>12:00:00</span></td>
+
+								<td><span>Khalifa International</span></td>
+
+
+
+							</tr>
+
+						</tbody>
+					</table>
+					<br>
+					<h3>Final:</h3>
+					<br>
+					<h4>18 / 12 / 2022:</h4>
+
+					<table class="table table-striped" id="tabela-grupos">
+						<thead>
+							<tr>
+								<th>Id Jogo</th>
+								<th>Grupo</th>
+								<th>Time 1</th>
+
+								<th></th>
+
+								<th>Time 2</th>
+								<th>Data</th>
+								<th>Hora</th>
+								<th>Estádio</th>
+							</tr>
+						</thead>
+
+						<tbody>
+
+							<tr>
+								<td><span>64</span></td>
+								<td><span>Final</span></td>
+
+								<td><span>Vencedor jogo nº61</span></td>
+
+								<td><span>x</span></td>
+
+								<td><span>Vencedor jogo nº62</span></td>
+								<td><span>18/12/2022</span></td>
+								<td><span>12:00:00</span></td>
+
+								<td><span>Lusail</span></td>
+
+
+
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+
+
+
+
+
+			</div>
+		</div>
+	</div>
+
+</body>
+<div class="rodape">
+	<footer> Desenvolvido por Flavio Tatit - Academia Java
+		UFN/ATOS </footer>
+</div>
+<br />
+</html>
