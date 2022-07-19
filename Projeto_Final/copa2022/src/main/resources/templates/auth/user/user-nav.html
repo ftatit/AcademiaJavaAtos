@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="https:/thymeleaf.org">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+</head>
+<body>
+
+	<!-- Fragmento de código do Bootsrap e Navbar importada: -->
+	<nav th:fragment="nav"
+		class="navbar navbar-expand-lg navbar-light bg-danger">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">Copa do Mundo - Qatar 2022</a>
+
+			<button class="navbar-toggler" type="button"
+				data-bs-toggle="collapse" data-bs-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav">
+					<li class="nav-item"><a class="nav-link active"
+						aria-current="page" href="/">Home</a></li>
+
+					<li class="nav-item"><a class="nav-link active"
+						aria-current="page" href="/grupos">Grupos</a></li>
+
+					<li class="nav-item"><a class="nav-link active"
+						aria-current="page" href="/curiosidades">Estádios</a></li>
+
+					<li class="nav-item"><a class="nav-link active"
+						aria-current="page" href="/calendario">Calendario</a></li>
+
+					<li class="nav-item"><a class="nav-link"
+						href="/jogos/user/listar">Resultados Jogos</a></li>
+
+					<li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
+					
+					<li class="nav-item"><a class="nav-link" href="/usuario/novo">Cadastramento
+							</a></li>
+
+					<!-- PÁGINAS APENAS DOS USUÁRIOS: -->
+
+					<li class="nav-item"><a class="nav-link" href="">   </a></li>
+					<li class="nav-item"><a class="nav-link" href="">   </a></li>
+
+
+					<li class="nav-item"><a class="nav-link" href="/Bolao/novo">
+							<strong>Preencher Bolão</strong></a></li>
+
+					<li class="nav-item"><a class="nav-link"
+						href="/Bolao/user/listar"><strong>Placares do Bolão</strong></a></li>
+
+					<li class="nav-item"><a class="nav-link" href="/logout"><strong>Logout</strong></a></li>
+
+
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+</body>
+<div class="rodape">
+	<footer> Desenvolvido por Flavio Tatit - Academia Java
+		UFN/ATOS </footer>
+</div>
+<br />
+</html>

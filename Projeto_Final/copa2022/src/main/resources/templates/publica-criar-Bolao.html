@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="https:/thymeleaf.org">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/images/logo-fifa-qatar-2022.png">
+<title>Publica Criar Jogos Bolão</title>
+
+<!-- 
+<link rel="stylesheet"
+	th:href="@{/bootstrap-5.1.3-dist/css/bootstrap.min.css}">
+<script th:src="@{/jquery-3.6.0-dist/jquery-3.6.0.min.js}"></script>
+<script th:src="@{/bootstrap-5.1.3-dist/js/bootstrap.min.js}"></script>-->
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css"
+	integrity="sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w=="
+	crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="jquery-3.6.0.min.js"></script>
+
+
+<style>
+.mensagem {
+	color: red;
+	/* Caso tenha algum erro no formulário, printa as mensagens de vermelho*/
+}
+</style>
+
+
+</head>
+
+
+<body>
+	<!-- Fragmento de código da barra menu do bootstrap  
+	<div th:insert="fragments/publica-nav :: nav"></div>-->
+	<div th:replace="auth/auth-generica-nav :: navGenerica"></div>
+
+	<!-- Classe do bootstrap> -->
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<h2>Cadastro de jogos do Bolão</h2>
+
+				<!-- Essa dvi é relacionada ao bootstrap: -->
+				<div class="alert alert-success alert-dismissible fade show"
+					th:if="${mensagem}">
+					<button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+					<span th:text="${mensagem}"></span>
+				</div>
+				<form action="#" th:action="@{/Bolao/salvar}" th:object="${Bolao}"
+					method="post">
+
+
+
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Nome Usuario:</label>
+						<div class="col-sm-5">
+							<input class="form-control" type="text" th:field="*{nomeUsuario}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem"
+								th:if="${#fields.hasErrors('nomeUsuario')}"
+								th:errors="*{nomeUsuario}"></span>
+
+						</div>
+					</div>
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">CPF:</label>
+						<div class="col-sm-3">
+							<input class="form-control" type="text" th:field="*{cpf}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem" th:if="${#fields.hasErrors('cpf')}"
+								th:errors="*{cpf}"></span>
+						</div>
+					</div>
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Email:</label>
+						<div class="col-sm-2">
+							<input class="form-control" type="text" th:field="*{email}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem" th:if="${#fields.hasErrors('email')}"
+								th:errors="*{email}"></span>
+						</div>
+					</div>
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 1: Qatar x
+							Equador:</label>
+						<div class="col-sm-5">
+							<input class="form-control" type="text" th:field="*{bolaoJogo1}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem" th:if="${#fields.hasErrors('bolaoJogo1')}"
+								th:errors="*{bolaoJogo1}"></span>
+							<!-- Executa a chave "jogoExiste" se esse jogo ja estiver cadastrado: -->
+							<span class="mensagem" th:if="${jogoExiste}"
+								th:text="${jogoExiste}"></span>
+						</div>
+					</div>
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 2: Senegal x
+							Holanda:</label>
+						<div class="col-sm-3">
+							<input class="form-control" type="text" th:field="*{bolaoJogo2}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem" th:if="${#fields.hasErrors('bolaoJogo2')}"
+								th:errors="*{bolaoJogo2}"></span>
+						</div>
+					</div>
+
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 3: Inglaterra
+							x Iran::</label>
+						<div class="col-sm-2">
+							<input class="form-control" type="text" th:field="*{bolaoJogo3}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem" th:if="${#fields.hasErrors('bolaoJogo3')}"
+								th:errors="*{bolaoJogo3}"></span>
+						</div>
+					</div>
+
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 4: Estados
+							Unidos x País de Gales:</label>
+						<div class="col-sm-2">
+							<input class="form-control" type="text" th:field="*{bolaoJogo4}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem" th:if="${#fields.hasErrors('bolaoJogo4')}"
+								th:errors="*{bolaoJogo4}"></span>
+						</div>
+					</div>
+
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 5: França x
+							Austrália:</label>
+						<div class="col-sm-5">
+							<input class="form-control" type="text" th:field="*{bolaoJogo5}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem" th:if="${#fields.hasErrors('bolaoJogo5')}"
+								th:errors="*{bolaoJogo5}"></span>
+							<!-- Executa a chave "jogoExiste" se esse jogo ja estiver cadastrado: -->
+							<span class="mensagem" th:if="${jogoExiste}"
+								th:text="${jogoExiste}"></span>
+						</div>
+					</div>
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 6: Dinamarca x
+							Tunísia:</label>
+						<div class="col-sm-3">
+							<input class="form-control" type="text" th:field="*{bolaoJogo6}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem" th:if="${#fields.hasErrors('bolaoJogo6')}"
+								th:errors="*{bolaoJogo6}"></span>
+						</div>
+					</div>
+
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 7: México x
+							Polônia:</label>
+						<div class="col-sm-2">
+							<input class="form-control" type="text" th:field="*{bolaoJogo7}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem" th:if="${#fields.hasErrors('bolaoJogo7')}"
+								th:errors="*{bolaoJogo7}"></span>
+						</div>
+					</div>
+
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 8: Argentina x
+							Arábia Saudita:</label>
+						<div class="col-sm-2">
+							<input class="form-control" type="text" th:field="*{bolaoJogo8}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem" th:if="${#fields.hasErrors('bolaoJogo8')}"
+								th:errors="*{bolaoJogo8}"></span>
+						</div>
+					</div>
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 9: Bélgica x
+							Canadá</label>
+						<div class="col-sm-5">
+							<input class="form-control" type="text" th:field="*{bolaoJogo9}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem" th:if="${#fields.hasErrors('bolaoJogo9')}"
+								th:errors="*{bolaoJogo9}"></span>
+							<!-- Executa a chave "jogoExiste" se esse jogo ja estiver cadastrado: -->
+							<span class="mensagem" th:if="${jogoExiste}"
+								th:text="${jogoExiste}"></span>
+						</div>
+					</div>
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 10: Espanha x
+							Costa Rica</label>
+						<div class="col-sm-3">
+							<input class="form-control" type="text" th:field="*{bolaoJogo10}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem"
+								th:if="${#fields.hasErrors('bolaoJogo10')}"
+								th:errors="*{bolaoJogo10}"></span>
+						</div>
+					</div>
+
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 11: Alemanha x
+							Japão</label>
+						<div class="col-sm-2">
+							<input class="form-control" type="text" th:field="*{bolaoJogo11}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem"
+								th:if="${#fields.hasErrors('bolaoJogo11')}"
+								th:errors="*{bolaoJogo11}"></span>
+						</div>
+					</div>
+
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 12: Marrocos e
+							Croácia</label>
+						<div class="col-sm-2">
+							<input class="form-control" type="text" th:field="*{bolaoJogo12}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem"
+								th:if="${#fields.hasErrors('bolaoJogo12')}"
+								th:errors="*{bolaoJogo12}"></span>
+						</div>
+					</div>
+
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 13: Suiça x
+							Camarões</label>
+						<div class="col-sm-5">
+							<input class="form-control" type="text" th:field="*{bolaoJogo13}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem"
+								th:if="${#fields.hasErrors('bolaoJogo13')}"
+								th:errors="*{bolaoJogo13}"></span>
+							<!-- Executa a chave "jogoExiste" se esse jogo ja estiver cadastrado: -->
+							<span class="mensagem" th:if="${jogoExiste}"
+								th:text="${jogoExiste}"></span>
+						</div>
+					</div>
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 14: Uruguai x
+							Coreia do Sul</label>
+						<div class="col-sm-3">
+							<input class="form-control" type="text" th:field="*{bolaoJogo14}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem"
+								th:if="${#fields.hasErrors('bolaoJogo14')}"
+								th:errors="*{bolaoJogo14}"></span>
+						</div>
+					</div>
+
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 15: Portugal x
+							Gana</label>
+						<div class="col-sm-2">
+							<input class="form-control" type="text" th:field="*{bolaoJogo15}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem"
+								th:if="${#fields.hasErrors('bolaoJogo15')}"
+								th:errors="*{bolaoJogo15}"></span>
+						</div>
+					</div>
+
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 16: Brasil x
+							Sérvia</label>
+						<div class="col-sm-2">
+							<input class="form-control" type="text" th:field="*{bolaoJogo16}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem"
+								th:if="${#fields.hasErrors('bolaoJogo16')}"
+								th:errors="*{bolaoJogo16}"></span>
+						</div>
+					</div>
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 17: País de
+							Gales x Iran</label>
+						<div class="col-sm-5">
+							<input class="form-control" type="text" th:field="*{bolaoJogo17}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem"
+								th:if="${#fields.hasErrors('bolaoJogo17')}"
+								th:errors="*{bolaoJogo17}"></span>
+							<!-- Executa a chave "jogoExiste" se esse jogo ja estiver cadastrado: -->
+							<span class="mensagem" th:if="${jogoExiste}"
+								th:text="${jogoExiste}"></span>
+						</div>
+					</div>
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 18: Qatar x
+							Senegal</label>
+						<div class="col-sm-3">
+							<input class="form-control" type="text" th:field="*{bolaoJogo18}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem"
+								th:if="${#fields.hasErrors('bolaoJogo18')}"
+								th:errors="*{bolaoJogo18}"></span>
+						</div>
+					</div>
+
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 19: Holanda x
+							Equador</label>
+						<div class="col-sm-2">
+							<input class="form-control" type="text" th:field="*{bolaoJogo19}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem"
+								th:if="${#fields.hasErrors('bolaoJogo19')}"
+								th:errors="*{bolaoJogo19}"></span>
+						</div>
+					</div>
+
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 20: Inglaterra
+							x Estados Unidos</label>
+						<div class="col-sm-2">
+							<input class="form-control" type="text" th:field="*{bolaoJogo20}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem"
+								th:if="${#fields.hasErrors('bolaoJogo20')}"
+								th:errors="*{bolaoJogo20}"></span>
+						</div>
+					</div>
+
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 21: Tunísia x
+							Austrália</label>
+						<div class="col-sm-5">
+							<input class="form-control" type="text" th:field="*{bolaoJogo21}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem"
+								th:if="${#fields.hasErrors('bolaoJogo21')}"
+								th:errors="*{bolaoJogo21}"></span>
+							<!-- Executa a chave "jogoExiste" se esse jogo ja estiver cadastrado: -->
+							<span class="mensagem" th:if="${jogoExiste}"
+								th:text="${jogoExiste}"></span>
+						</div>
+					</div>
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 22: Polônia x
+							Arábia Saudita</label>
+						<div class="col-sm-3">
+							<input class="form-control" type="text" th:field="*{bolaoJogo22}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem"
+								th:if="${#fields.hasErrors('bolaoJogo22')}"
+								th:errors="*{bolaoJogo22}"></span>
+						</div>
+					</div>
+
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 23: França x
+							Dinamarca</label>
+						<div class="col-sm-2">
+							<input class="form-control" type="text" th:field="*{bolaoJogo23}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem"
+								th:if="${#fields.hasErrors('bolaoJogo23')}"
+								th:errors="*{bolaoJogo23}"></span>
+						</div>
+					</div>
+
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 24: Argentina
+							x México</label>
+						<div class="col-sm-2">
+							<input class="form-control" type="text" th:field="*{bolaoJogo24}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem"
+								th:if="${#fields.hasErrors('bolaoJogo24')}"
+								th:errors="*{bolaoJogo24}"></span>
+						</div>
+					</div>
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 25: Japão x
+							Costa Rica</label>
+						<div class="col-sm-5">
+							<input class="form-control" type="text" th:field="*{bolaoJogo25}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem"
+								th:if="${#fields.hasErrors('bolaoJogo25')}"
+								th:errors="*{bolaoJogo25}"></span>
+							<!-- Executa a chave "jogoExiste" se esse jogo ja estiver cadastrado: -->
+							<span class="mensagem" th:if="${jogoExiste}"
+								th:text="${jogoExiste}"></span>
+						</div>
+					</div>
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 26: Bélgica x
+							Marrocos</label>
+						<div class="col-sm-3">
+							<input class="form-control" type="text" th:field="*{bolaoJogo26}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem"
+								th:if="${#fields.hasErrors('bolaoJogo26')}"
+								th:errors="*{bolaoJogo26}"></span>
+						</div>
+					</div>
+
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 27: Croácia x
+							Canadá</label>
+						<div class="col-sm-2">
+							<input class="form-control" type="text" th:field="*{bolaoJogo27}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem"
+								th:if="${#fields.hasErrors('bolaoJogo27')}"
+								th:errors="*{bolaoJogo27}"></span>
+						</div>
+					</div>
+
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 28: Espanha x
+							Alemanha</label>
+						<div class="col-sm-2">
+							<input class="form-control" type="text" th:field="*{bolaoJogo28}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem"
+								th:if="${#fields.hasErrors('bolaoJogo28')}"
+								th:errors="*{bolaoJogo28}"></span>
+						</div>
+					</div>
+
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 29: Camarões x
+							Sérvia</label>
+						<div class="col-sm-5">
+							<input class="form-control" type="text" th:field="*{bolaoJogo29}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem"
+								th:if="${#fields.hasErrors('bolaoJogo29')}"
+								th:errors="*{bolaoJogo29}"></span>
+							<!-- Executa a chave "jogoExiste" se esse jogo ja estiver cadastrado: -->
+							<span class="mensagem" th:if="${jogoExiste}"
+								th:text="${jogoExiste}"></span>
+						</div>
+					</div>
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 30: Coreia do
+							Sul x Gana</label>
+						<div class="col-sm-3">
+							<input class="form-control" type="text" th:field="*{bolaoJogo30}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem"
+								th:if="${#fields.hasErrors('bolaoJogo30')}"
+								th:errors="*{bolaoJogo30}"></span>
+						</div>
+					</div>
+
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 31: Brasil x
+							Suiça</label>
+						<div class="col-sm-2">
+							<input class="form-control" type="text" th:field="*{bolaoJogo31}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem"
+								th:if="${#fields.hasErrors('bolaoJogo31')}"
+								th:errors="*{bolaoJogo31}"></span>
+						</div>
+					</div>
+
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 32: Portugal x
+							Uruguai</label>
+						<div class="col-sm-2">
+							<input class="form-control" type="text" th:field="*{bolaoJogo32}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem"
+								th:if="${#fields.hasErrors('bolaoJogo32')}"
+								th:errors="*{bolaoJogo32}"></span>
+						</div>
+					</div>
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 33: País de
+							Gales x Inglaterra</label>
+						<div class="col-sm-5">
+							<input class="form-control" type="text" th:field="*{bolaoJogo33}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem"
+								th:if="${#fields.hasErrors('bolaoJogo33')}"
+								th:errors="*{bolaoJogo33}"></span>
+							<!-- Executa a chave "jogoExiste" se esse jogo ja estiver cadastrado: -->
+							<span class="mensagem" th:if="${jogoExiste}"
+								th:text="${jogoExiste}"></span>
+						</div>
+					</div>
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 34: Iran x
+							Estados Unidos</label>
+						<div class="col-sm-3">
+							<input class="form-control" type="text" th:field="*{bolaoJogo34}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem"
+								th:if="${#fields.hasErrors('bolaoJogo34')}"
+								th:errors="*{bolaoJogo34}"></span>
+						</div>
+					</div>
+
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 35: Equador x
+							Senegal</label>
+						<div class="col-sm-2">
+							<input class="form-control" type="text" th:field="*{bolaoJogo35}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem"
+								th:if="${#fields.hasErrors('bolaoJogo35')}"
+								th:errors="*{bolaoJogo35}"></span>
+						</div>
+					</div>
+
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 36: Holanda x
+							Qatar</label>
+						<div class="col-sm-2">
+							<input class="form-control" type="text" th:field="*{bolaoJogo36}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem"
+								th:if="${#fields.hasErrors('bolaoJogo36')}"
+								th:errors="*{bolaoJogo36}"></span>
+						</div>
+					</div>
+
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 37: Austrália
+							x Dinamarca</label>
+						<div class="col-sm-5">
+							<input class="form-control" type="text" th:field="*{bolaoJogo37}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem"
+								th:if="${#fields.hasErrors('bolaoJogo37')}"
+								th:errors="*{bolaoJogo37}"></span>
+							<!-- Executa a chave "jogoExiste" se esse jogo ja estiver cadastrado: -->
+							<span class="mensagem" th:if="${jogoExiste}"
+								th:text="${jogoExiste}"></span>
+						</div>
+					</div>
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 38: Tunísia x
+							França</label>
+						<div class="col-sm-3">
+							<input class="form-control" type="text" th:field="*{bolaoJogo38}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem"
+								th:if="${#fields.hasErrors('bolaoJogo38')}"
+								th:errors="*{bolaoJogo38}"></span>
+						</div>
+					</div>
+
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 39: Polônia x
+							Argentina</label>
+						<div class="col-sm-2">
+							<input class="form-control" type="text" th:field="*{bolaoJogo39}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem"
+								th:if="${#fields.hasErrors('bolaoJogo39')}"
+								th:errors="*{bolaoJogo39}"></span>
+						</div>
+					</div>
+
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 40: Arábia
+							Saudita x México</label>
+						<div class="col-sm-2">
+							<input class="form-control" type="text" th:field="*{bolaoJogo40}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem"
+								th:if="${#fields.hasErrors('bolaoJogo40')}"
+								th:errors="*{bolaoJogo40}"></span>
+						</div>
+					</div>
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 41: Croácia x
+							Bélgica</label>
+						<div class="col-sm-5">
+							<input class="form-control" type="text" th:field="*{bolaoJogo41}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem"
+								th:if="${#fields.hasErrors('bolaoJogo41')}"
+								th:errors="*{bolaoJogo41}"></span>
+							<!-- Executa a chave "jogoExiste" se esse jogo ja estiver cadastrado: -->
+							<span class="mensagem" th:if="${jogoExiste}"
+								th:text="${jogoExiste}"></span>
+						</div>
+					</div>
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 42: Canadá x
+							Marrocos</label>
+						<div class="col-sm-3">
+							<input class="form-control" type="text" th:field="*{bolaoJogo42}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem"
+								th:if="${#fields.hasErrors('bolaoJogo42')}"
+								th:errors="*{bolaoJogo42}"></span>
+						</div>
+					</div>
+
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 43: Japão x
+							Espanha</label>
+						<div class="col-sm-2">
+							<input class="form-control" type="text" th:field="*{bolaoJogo43}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem"
+								th:if="${#fields.hasErrors('bolaoJogo43')}"
+								th:errors="*{bolaoJogo43}"></span>
+						</div>
+					</div>
+
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 44: Costa Rica
+							x Alemanha</label>
+						<div class="col-sm-2">
+							<input class="form-control" type="text" th:field="*{bolaoJogo44}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem"
+								th:if="${#fields.hasErrors('bolaoJogo44')}"
+								th:errors="*{bolaoJogo44}"></span>
+						</div>
+					</div>
+
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 45: Gana x
+							Uruguai</label>
+						<div class="col-sm-5">
+							<input class="form-control" type="text" th:field="*{bolaoJogo45}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem"
+								th:if="${#fields.hasErrors('bolaoJogo45')}"
+								th:errors="*{bolaoJogo45}"></span>
+							<!-- Executa a chave "jogoExiste" se esse jogo ja estiver cadastrado: -->
+							<span class="mensagem" th:if="${jogoExiste}"
+								th:text="${jogoExiste}"></span>
+						</div>
+					</div>
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 46: Coreia do
+							Sul x Portugal</label>
+						<div class="col-sm-3">
+							<input class="form-control" type="text" th:field="*{bolaoJogo46}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem"
+								th:if="${#fields.hasErrors('bolaoJogo46')}"
+								th:errors="*{bolaoJogo46}"></span>
+						</div>
+					</div>
+
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 47: Sérvia x
+							Suiça</label>
+						<div class="col-sm-2">
+							<input class="form-control" type="text" th:field="*{bolaoJogo47}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem"
+								th:if="${#fields.hasErrors('bolaoJogo47')}"
+								th:errors="*{bolaoJogo47}"></span>
+						</div>
+					</div>
+
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 48: Camarões x
+							Brasil</label>
+						<div class="col-sm-2">
+							<input class="form-control" type="text" th:field="*{bolaoJogo48}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem"
+								th:if="${#fields.hasErrors('bolaoJogo48')}"
+								th:errors="*{bolaoJogo48}"></span>
+						</div>
+					</div>
+
+					<!-- SEGUNDA FASE (MATA-MATA) -->
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 49: 1ºA x 2ºB</label>
+						<div class="col-sm-5">
+							<input class="form-control" type="text" th:field="*{bolaoJogo49}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem"
+								th:if="${#fields.hasErrors('bolaoJogo49')}"
+								th:errors="*{bolaoJogo49}"></span>
+							<!-- Executa a chave "jogoExiste" se esse jogo ja estiver cadastrado: -->
+							<span class="mensagem" th:if="${jogoExiste}"
+								th:text="${jogoExiste}"></span>
+						</div>
+					</div>
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 50: 1ºC x 2ºD</label>
+						<div class="col-sm-3">
+							<input class="form-control" type="text" th:field="*{bolaoJogo50}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem"
+								th:if="${#fields.hasErrors('bolaoJogo50')}"
+								th:errors="*{bolaoJogo50}"></span>
+						</div>
+					</div>
+
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 51: 1ºB x 2ºA</label>
+						<div class="col-sm-2">
+							<input class="form-control" type="text" th:field="*{bolaoJogo51}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem"
+								th:if="${#fields.hasErrors('bolaoJogo51')}"
+								th:errors="*{bolaoJogo51}"></span>
+						</div>
+					</div>
+
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 52: 1ºD x 2ºC
+						</label>
+						<div class="col-sm-2">
+							<input class="form-control" type="text" th:field="*{bolaoJogo52}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem"
+								th:if="${#fields.hasErrors('bolaoJogo52')}"
+								th:errors="*{bolaoJogo52}"></span>
+						</div>
+					</div>
+
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 53: 1ºE x 2ºF</label>
+						<div class="col-sm-5">
+							<input class="form-control" type="text" th:field="*{bolaoJogo53}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem"
+								th:if="${#fields.hasErrors('bolaoJogo53')}"
+								th:errors="*{bolaoJogo53}"></span>
+							<!-- Executa a chave "jogoExiste" se esse jogo ja estiver cadastrado: -->
+							<span class="mensagem" th:if="${jogoExiste}"
+								th:text="${jogoExiste}"></span>
+						</div>
+					</div>
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 54: 1ºG x 2ºH</label>
+						<div class="col-sm-3">
+							<input class="form-control" type="text" th:field="*{bolaoJogo54}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem"
+								th:if="${#fields.hasErrors('bolaoJogo54')}"
+								th:errors="*{bolaoJogo54}"></span>
+						</div>
+					</div>
+
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 55: 1ºF x 2ºE</label>
+						<div class="col-sm-2">
+							<input class="form-control" type="text" th:field="*{bolaoJogo55}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem"
+								th:if="${#fields.hasErrors('bolaoJogo55')}"
+								th:errors="*{bolaoJogo55}"></span>
+						</div>
+					</div>
+
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 56: 1ºH x 2ºG</label>
+						<div class="col-sm-2">
+							<input class="form-control" type="text" th:field="*{bolaoJogo56}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem"
+								th:if="${#fields.hasErrors('bolaoJogo56')}"
+								th:errors="*{bolaoJogo56}"></span>
+						</div>
+					</div>
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 57: Vencedor
+							nº49 x Vencedor nº50</label>
+						<div class="col-sm-5">
+							<input class="form-control" type="text" th:field="*{bolaoJogo57}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem"
+								th:if="${#fields.hasErrors('bolaoJogo57')}"
+								th:errors="*{bolaoJogo57}"></span>
+							<!-- Executa a chave "jogoExiste" se esse jogo ja estiver cadastrado: -->
+							<span class="mensagem" th:if="${jogoExiste}"
+								th:text="${jogoExiste}"></span>
+						</div>
+					</div>
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 58: Vencedor
+							nº53 x Vencedor nº54</label>
+						<div class="col-sm-3">
+							<input class="form-control" type="text" th:field="*{bolaoJogo58}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem"
+								th:if="${#fields.hasErrors('bolaoJogo58')}"
+								th:errors="*{bolaoJogo58}"></span>
+						</div>
+					</div>
+
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 59: Vencedor
+							nº51 x Vencedor nº52</label>
+						<div class="col-sm-2">
+							<input class="form-control" type="text" th:field="*{bolaoJogo59}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem"
+								th:if="${#fields.hasErrors('bolaoJogo59')}"
+								th:errors="*{bolaoJogo59}"></span>
+						</div>
+					</div>
+
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 60: Vencedor
+							nº55 x Vencedor nº56</label>
+						<div class="col-sm-2">
+							<input class="form-control" type="text" th:field="*{bolaoJogo60}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem"
+								th:if="${#fields.hasErrors('bolaoJogo60')}"
+								th:errors="*{bolaoJogo60}"></span>
+						</div>
+					</div>
+
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 61: Vencedor
+							nº57 x Vencedor nº58</label>
+						<div class="col-sm-5">
+							<input class="form-control" type="text" th:field="*{bolaoJogo61}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem"
+								th:if="${#fields.hasErrors('bolaoJogo61')}"
+								th:errors="*{bolaoJogo61}"></span>
+							<!-- Executa a chave "jogoExiste" se esse jogo ja estiver cadastrado: -->
+							<span class="mensagem" th:if="${jogoExiste}"
+								th:text="${jogoExiste}"></span>
+						</div>
+					</div>
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 62: Vencedor
+							nº59 x Vencedor nº60</label>
+						<div class="col-sm-3">
+							<input class="form-control" type="text" th:field="*{bolaoJogo62}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem"
+								th:if="${#fields.hasErrors('bolaoJogo62')}"
+								th:errors="*{bolaoJogo62}"></span>
+						</div>
+					</div>
+
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 63: Perdedor
+							nº61 x Perdedor nº62</label>
+						<div class="col-sm-2">
+							<input class="form-control" type="text" th:field="*{bolaoJogo63}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem"
+								th:if="${#fields.hasErrors('bolaoJogo63')}"
+								th:errors="*{bolaoJogo63}"></span>
+						</div>
+					</div>
+
+
+					<div class="row mb-3">
+						<label class="col-sm-1 col-form-label">Jogo 64: Vencedor
+							nº61 x Vencedor nº62</label>
+						<div class="col-sm-2">
+							<input class="form-control" type="text" th:field="*{bolaoJogo64}">
+						</div>
+						<div class="col-sm-5">
+							<span class="mensagem"
+								th:if="${#fields.hasErrors('bolaoJogo64')}"
+								th:errors="*{bolaoJogo64}"></span>
+						</div>
+					</div>
+
+
+
+
+
+					<input class="btn btn-primary" type="submit" value="Cadastrar Jogo" />
+				</form>
+
+			</div>
+		</div>
+	</div>
+
+</body>
+<div class="rodape">
+	<footer> Desenvolvido por Flavio Tatit - Academia Java
+		UFN/ATOS </footer>
+</div>
+<br />
+</html>
