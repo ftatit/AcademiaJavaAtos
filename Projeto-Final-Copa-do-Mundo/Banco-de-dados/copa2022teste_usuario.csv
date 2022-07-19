@@ -1,0 +1,11 @@
+id,ativo,cpf,data_nascimento,email,login,nome,password
+1,1,40242649823,1990-04-26,flavio@email.com,flavio,Flavio,$2a$10$saQulxgDm4itpsiXx4Hb5OM1YDhCi/ebIBjBvwSopmYhesBg/mXl6
+6,1,40242649823,1990-03-13,admin@email.com,admin,admin,$2a$10$IL8C9w6Q9KuV7dMYvChemedtH.G0y5axhcZCqPaSRPsbtXpaMrEUK
+7,0,36356663863,1990-01-25,admin2@email.com,admin2,admin2,$2a$10$RNUGVZITLgtXC0z9XWZKyuib4AqJ2S2FdNGcEo11SRvXPhcPLjHT2
+8,1,66774721834,1951-04-09,part1@email.com,user,"Participante 01",$2a$10$iQuGjHOESa8ltlDZs.e39eOE8KNJwrWj1QDTz8zlg9jCchMZgkpLy
+9,1,06307650818,1961-04-28,part2@email.com,user2,"Participante 02",$2a$10$PCKcHYVHm3bKyNp6FXeClugPhHXu03HjQXT.O4lFJa2yKVAcdJIay
+10,1,31060392801,1931-03-27,part3@email.com,user3,"Participante 03",$2a$10$8cTJeLCE0rmipxOPEQy9Pu9n/WBTfIM.xmly77zsd0fBBD95A9WQa
+11,1,16017818813,1967-05-12,part4@email.com,user4,"Participante 04",$2a$10$HVkkoEOPveDJSc3fnkNFE..8TZs9HLdAteL08raPYJj6cfWCE/6Ay
+12,0,00471839850,1990-04-28,part5@email.com,user5,"Participante 05",$2a$10$K5iLq0Td.XQegxNigcjwa.XydFDo/zfLRQkqdI8ce9ZARIhHoGl8y
+15,0,39526929802,1989-04-18,part6@email.com,user6,"Participante 06",$2a$10$cadjq5OQT7TEP/EikNQSXOAbV7ztwFoFcT0KUHI5DwhzwpDUbn6oC
+16,0,39537794865,1990-03-14,part7@email.com,user7,"Participante 07",$2a$10$u6COLYBhWMrbVu5P7yuOfumAu/lnU.T4P6Q8daWSEVO/.ihnThHEO
