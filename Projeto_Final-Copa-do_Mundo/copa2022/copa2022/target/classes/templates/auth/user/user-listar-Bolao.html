@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="https:/thymeleaf.org">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/images/logo-fifa-qatar-2022.png">
+<title>User - Listar Bolão</title>
+
+
+<!-- Importando JQuery e Bootstrap: -->
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css"
+	integrity="sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w=="
+	crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="jquery-3.6.0.min.js"></script>
+
+<style>
+.table tr {
+	display: block;
+	float: left;
+}
+
+.table th, td {
+	display: block;
+}
+</style>
+
+</head>
+<body>
+	<div th:replace="auth/auth-generica-nav :: navGenerica"></div>
+	<div class="container">
+		<div class="row">
+
+			<div class="col">
+				<br>
+				<h2>Tabela dos participantes do bolão:</h2>
+
+				<table>
+					<tr th:if="${Bolao.empty}">
+						<td colspan="2">Nenhum resultado do bolão foi cadastrado</td>
+					</tr>
+				</table>
+
+				<br>
+
+				<table class="table table-striped">
+
+					<tr>
+						<th>Nome Participante</th>
+						<th>CPF</th>
+						<th>E-mail</th>
+						<th>Jogo 1: Qatar x Equador</th>
+						<th>Jogo 2: Senegal x Holanda</th>
+						<th>Jogo 3: Inglaterra x Iran</th>
+						<th>Jogo 4: Estados Unidos x País de Gales</th>
+						<th>Jogo 5: França x Austrália</th>
+						<th>Jogo 6: Dinamarca x Tunísia</th>
+						<th>Jogo 7: México x Polônia</th>
+						<th>Jogo 8: Argentina x Arábia Saudita</th>
+
+						<th>Jogo 9: Bélgica x Canadá</th>
+						<th>Jogo 10: Espanha x Costa Rica</th>
+						<th>Jogo 11: Alemanha x Japão</th>
+						<th>Jogo 12: Marrocos e Croácia</th>
+						<th>Jogo 13: Suiça x Camarões</th>
+						<th>Jogo 14: Uruguai x Coreia do Sul</th>
+						<th>Jogo 15: Portugal x Gana</th>
+						<th>Jogo 16: Brasil x Sérvia</th>
+						<th>Jogo 17: País de Gales x Iran</th>
+						<th>Jogo 18: Qatar x Senegal</th>
+						<th>Jogo 19: Holanda x Equador</th>
+						<th>Jogo 20: Inglaterra x Estados Unidos</th>
+						<th>Jogo 21: Tunísia x Austrália</th>
+						<th>Jogo 22: Polônia x Arábia Saudita</th>
+						<th>Jogo 23: França x Dinamarca</th>
+						<th>Jogo 24: Argentina x México</th>
+						<th>Jogo 25: Japão x Costa Rica</th>
+						<th>Jogo 26: Bélgica x Marrocos</th>
+						<th>Jogo 27: Croácia x Canadá</th>
+						<th>Jogo 28: Espanha x Alemanha</th>
+						<th>Jogo 29: Camarões x Sérvia</th>
+						<th>Jogo 30: Coreia do Sul x Gana</th>
+						<th>Jogo 31: Brasil x Suiça</th>
+						<th>Jogo 32: Portugal x Uruguai</th>
+						<th>Jogo 33: País de Gales x Inglaterra</th>
+						<th>Jogo 34: Iran x Estados Unidos</th>
+						<th>Jogo 35: Equador x Senegal</th>
+						<th>Jogo 36: Holanda x Qatar</th>
+						<th>Jogo 37: Austrália x Dinamarca</th>
+						<th>Jogo 38: Tunísia x França</th>
+						<th>Jogo 39: Polônia x Argentina</th>
+						<th>Jogo 40: Arábia Saudita x México</th>
+						<th>Jogo 41: Croácia x Bélgica</th>
+						<th>Jogo 42: Canadá x Marrocos</th>
+						<th>Jogo 43: Japão x Espanha</th>
+						<th>Jogo 44: Costa Rica x Alemanha</th>
+						<th>Jogo 45: Gana x Uruguai</th>
+						<th>Jogo 46: Coreia do Sul x Portugal</th>
+						<th>Jogo 47: Sérvia x Suiça</th>
+						<th>Jogo 48: Camarões x Brasil</th>
+						<th>Jogo 49: 1ºA x 2ºB</th>
+						<th>Jogo 50: 1ºC x 2ºD</th>
+						<th>Jogo 51: 1ºB x 2ºA</th>
+						<th>Jogo 52: 1ºD x 2ºC</th>
+						<th>Jogo 53: 1ºE x 2ºF</th>
+						<th>Jogo 54: 1ºG x 2ºH</th>
+						<th>Jogo 55: 1ºF x 2ºE</th>
+						<th>Jogo 56: 1ºH x 2ºG</th>
+						<th>Jogo 57: Vencedor nº49 x Vencedor nº50</th>
+						<th>Jogo 58: Vencedor nº53 x Vencedor nº54</th>
+						<th>Jogo 59: Vencedor nº51 x Vencedor nº52</th>
+						<th>Jogo 60: Vencedor nº55 x Vencedor nº56</th>
+						<th>Jogo 61: Vencedor nº57 x Vencedor nº58</th>
+						<th>Jogo 62: Vencedor nº59 x Vencedor nº60</th>
+						<th>Jogo 63: Perdedor nº61 x Perdedor nº62</th>
+						<th>Jogo 64: Vencedor nº61 x Vencedor nº62</th>
+
+
+
+					</tr>
+
+					<tr th:each="Bolao : ${Bolao}">
+						<td><span th:text="${Bolao.nomeUsuario}"> Nome </span></td>
+						<td><span th:text="${Bolao.cpf}"> CPF </span></td>
+						<td><span th:text="${Bolao.email}"> E-mail </span></td>
+
+						<td><span th:text="${Bolao.bolaoJogo1}"> Jogo 1 </span></td>
+						<td><span th:text="${Bolao.bolaoJogo2}"> Jogo 2</span></td>
+						<td><span th:text="${Bolao.bolaoJogo3}"> Jogo 3 </span></td>
+						<td><span th:text="${Bolao.bolaoJogo4}"> Jogo 4 </span></td>
+						<td><span th:text="${Bolao.bolaoJogo5}"> Jogo 5 </span></td>
+						<td><span th:text="${Bolao.bolaoJogo6}"> Jogo 6</span></td>
+						<td><span th:text="${Bolao.bolaoJogo7}"> Jogo 7 </span></td>
+						<td><span th:text="${Bolao.bolaoJogo8}"> Jogo 8 </span></td>
+						<td><span th:text="${Bolao.bolaoJogo9}"> Jogo 9 </span></td>
+						<td><span th:text="${Bolao.bolaoJogo10}"> Jogo 10</span></td>
+						<td><span th:text="${Bolao.bolaoJogo11}"> Jogo 11 </span></td>
+						<td><span th:text="${Bolao.bolaoJogo12}"> Jogo 12 </span></td>
+						<td><span th:text="${Bolao.bolaoJogo13}"> Jogo 13 </span></td>
+						<td><span th:text="${Bolao.bolaoJogo14}"> Jogo 14</span></td>
+						<td><span th:text="${Bolao.bolaoJogo15}"> Jogo 15 </span></td>
+						<td><span th:text="${Bolao.bolaoJogo16}"> Jogo 16 </span></td>
+						<td><span th:text="${Bolao.bolaoJogo17}"> Jogo 17 </span></td>
+						<td><span th:text="${Bolao.bolaoJogo18}"> Jogo 18</span></td>
+						<td><span th:text="${Bolao.bolaoJogo19}"> Jogo 19 </span></td>
+						<td><span th:text="${Bolao.bolaoJogo20}"> Jogo 20 </span></td>
+						<td><span th:text="${Bolao.bolaoJogo21}"> Jogo 21 </span></td>
+						<td><span th:text="${Bolao.bolaoJogo22}"> Jogo 21</span></td>
+						<td><span th:text="${Bolao.bolaoJogo23}"> Jogo 23 </span></td>
+						<td><span th:text="${Bolao.bolaoJogo24}"> Jogo 24 </span></td>
+						<td><span th:text="${Bolao.bolaoJogo25}"> Jogo 25 </span></td>
+						<td><span th:text="${Bolao.bolaoJogo26}"> Jogo 26</span></td>
+						<td><span th:text="${Bolao.bolaoJogo27}"> Jogo 27 </span></td>
+						<td><span th:text="${Bolao.bolaoJogo28}"> Jogo 28 </span></td>
+						<td><span th:text="${Bolao.bolaoJogo29}"> Jogo 29 </span></td>
+						<td><span th:text="${Bolao.bolaoJogo30}"> Jogo 30</span></td>
+						<td><span th:text="${Bolao.bolaoJogo31}"> Jogo 31 </span></td>
+						<td><span th:text="${Bolao.bolaoJogo32}"> Jogo 32 </span></td>
+						<td><span th:text="${Bolao.bolaoJogo33}"> Jogo 33 </span></td>
+						<td><span th:text="${Bolao.bolaoJogo34}"> Jogo 34</span></td>
+						<td><span th:text="${Bolao.bolaoJogo35}"> Jogo 35 </span></td>
+						<td><span th:text="${Bolao.bolaoJogo36}"> Jogo 36 </span></td>
+						<td><span th:text="${Bolao.bolaoJogo37}"> Jogo 37 </span></td>
+						<td><span th:text="${Bolao.bolaoJogo38}"> Jogo 38</span></td>
+						<td><span th:text="${Bolao.bolaoJogo39}"> Jogo 39 </span></td>
+						<td><span th:text="${Bolao.bolaoJogo40}"> Jogo 40 </span></td>
+						<td><span th:text="${Bolao.bolaoJogo41}"> Jogo 41 </span></td>
+						<td><span th:text="${Bolao.bolaoJogo42}"> Jogo 42</span></td>
+						<td><span th:text="${Bolao.bolaoJogo43}"> Jogo 43 </span></td>
+						<td><span th:text="${Bolao.bolaoJogo44}"> Jogo 44 </span></td>
+						<td><span th:text="${Bolao.bolaoJogo45}"> Jogo 45 </span></td>
+						<td><span th:text="${Bolao.bolaoJogo46}"> Jogo 46</span></td>
+						<td><span th:text="${Bolao.bolaoJogo47}"> Jogo 47 </span></td>
+						<td><span th:text="${Bolao.bolaoJogo48}"> Jogo 48 </span></td>
+						<td><span th:text="${Bolao.bolaoJogo49}"> Jogo 49 </span></td>
+						<td><span th:text="${Bolao.bolaoJogo50}"> Jogo 50</span></td>
+						<td><span th:text="${Bolao.bolaoJogo51}"> Jogo 51 </span></td>
+						<td><span th:text="${Bolao.bolaoJogo52}"> Jogo 52 </span></td>
+						<td><span th:text="${Bolao.bolaoJogo53}"> Jogo 53 </span></td>
+						<td><span th:text="${Bolao.bolaoJogo54}"> Jogo 54</span></td>
+						<td><span th:text="${Bolao.bolaoJogo55}"> Jogo 55 </span></td>
+						<td><span th:text="${Bolao.bolaoJogo56}"> Jogo 56 </span></td>
+						<td><span th:text="${Bolao.bolaoJogo57}"> Jogo 57 </span></td>
+						<td><span th:text="${Bolao.bolaoJogo58}"> Jogo 58</span></td>
+						<td><span th:text="${Bolao.bolaoJogo59}"> Jogo 59 </span></td>
+						<td><span th:text="${Bolao.bolaoJogo60}"> Jogo 60 </span></td>
+						<td><span th:text="${Bolao.bolaoJogo61}"> Jogo 61 </span></td>
+						<td><span th:text="${Bolao.bolaoJogo62}"> Jogo 62</span></td>
+						<td><span th:text="${Bolao.bolaoJogo63}"> Jogo 63 </span></td>
+						<td><span th:text="${Bolao.bolaoJogo64}"> Jogo 64</span></td>
+
+
+
+					</tr>
+				</table>
+			</div>
+
+		</div>
+	</div>
+
+
+</body>
+<div class="rodape">
+	<footer> Desenvolvido por Flavio Tatit - Academia Java
+		UFN/ATOS </footer>
+	<br />
+</html>
